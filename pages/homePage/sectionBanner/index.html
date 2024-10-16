@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../../../assets/style/global.css" />
+    <link rel="stylesheet" href="../../../assets/style/reset.css" />
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    /* Section header */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      height: 6.875rem;
+      justify-content: space-between;
+      /* backdrop-filter: blur(0); */
+      background: none;
+      color: #fff;
+      /* transform: translateY(-100%); */
+      z-index: 1000;
+      align-items: center;
+      background-color: transparent;
+    }
+    #header .overlay_background {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      z-index: -1;
+    }
+    #header .menu_btn {
+      background: none;
+      border: 0;
+      color: #fff;
+      text-align: right;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 2.56rem;
+      position: absolute;
+    }
+    #header .menu_btn.color {
+      color: #16954f;
+    }
+    #header .menu_btn .menu_icon {
+      width: 6.34375rem;
+      margin-right: 0.5rem;
+    }
+
+    #header .logo {
+      width: 11.4375rem;
+      height: 3.2025rem;
+      flex-shrink: 0;
+      position: absolute;
+      right: 2.75rem;
+      transition: all 0.4s ease-out;
+    }
+
+    #header.slide_white_active .logo.color,
+    #header.slide_color_active .logo.white,
+    #header.slide_white_active .menu_btn.color,
+    #header.slide_color_active .menu_btn.white {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #header.slide_color_active .logo.color,
+    #header.slide_white_active .logo.white {
+      opacity: 1;
+    }
+    #header .wrap_search_menu {
+      display: none;
+    }
+    /* Section menu */
+    .section_menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      flex-shrink: 0;
+      height: 100vh;
+      background-color: #fff;
+      transition: all 0.4s ease-out;
+      z-index: 1002;
+      pointer-events: none;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .section_menu.mb {
+      display: none;
+    }
+    .section_menu .background_image {
+      position: absolute;
+      top: -2rem;
+      left: 4rem;
+      z-index: -1;
+      width: 94.23825rem;
+      height: 50rem;
+    }
+    .section_menu .sub_bg_image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28.04344rem;
+      height: 23.762rem;
+      flex-shrink: 0;
+    }
+    .section_menu .close_menu {
+      display: flex;
+      height: 3.5rem;
+      width: 12.65625rem;
+      align-items: center;
+      margin-top: 2.19rem;
+      margin-left: 2.56rem;
+      color: #2a2a2a;
+      text-align: right;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+    }
+    .section_menu .close_menu .icon {
+      width: 6.34375rem;
+      height: 100%;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .section_menu.active {
+      width: 31.625rem;
+      opacity: 1;
+      pointer-events: all;
+    }
+    .section_menu.active_width_menu {
+      width: 100%;
+    }
+    /* SECTION: nav styles */
+    .section_menu .nav_menu {
+      width: 26.625rem;
+      list-style-type: none;
+      color: #2a2a2a;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 2.1rem */
+      letter-spacing: -0.03rem;
+      position: relative;
+      margin-top: 2.54rem;
+      margin-left: 0.256rem;
+    }
+    .section_menu .nav_menu .menu_item {
+      margin-top: 1.5rem;
+      height: 3.25rem;
+      display: flex;
+      align-items: end;
+      position: relative;
+      justify-content: space-between;
+      transition: all 0.4s ease-out;
+      cursor: pointer;
+    }
+    .section_menu .nav_menu .menu_item::after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 0;
+      top: 1.9rem;
+      border-radius: 100%;
+      background-color: #16954f;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+    .section_menu .nav_menu .menu_item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #16954f;
+      opacity: 0;
+      transition: all 0.4s ease-out;
+    }
+    .section_menu .nav_menu .menu_item .arrow_icon {
+      width: 1.875rem;
+      height: 1.875rem;
+      flex-shrink: 0;
+      margin-right: -0.5rem;
+      opacity: 0;
+      transition: all 0.7s ease-out;
+    }
+    .section_menu .nav_menu .menu_item:hover {
+      padding-left: 1.25rem;
+      color: #16954f;
+    }
+    .section_menu .nav_menu .menu_item:hover::after,
+    .section_menu .nav_menu .menu_item:hover::before,
+    .section_menu .nav_menu .menu_item:hover .arrow_icon {
+      opacity: 1;
+    }
+    /* SECTION: content menu */
+    .section_menu .nav_menu .menu_item .content {
+      width: 0;
+      height: 60rem;
+      background: transparent;
+      position: fixed;
+      left: 28.75rem;
+      top: 1.5rem;
+      opacity: 0;
+      transition: all 0.4s ease-out;
+      pointer-events: none;
+      /* display: flex;
+      justify-content: center; */
+      overflow: hidden;
+    }
+    .section_menu .nav_menu .menu_item:hover .content {
+      opacity: 1;
+      width: calc(100% - 26.625rem);
+      pointer-events: all;
+    }
+    .section_menu .nav_menu .menu_item .content .content_item {
+      position: absolute;
+      left: 7rem;
+      width: 55.9375rem;
+      top: 6.5rem;
+    }
+    .section_menu .nav_menu .menu_item .content_image {
+      width: 55.9375rem;
+      height: 30rem;
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    .section_menu .nav_menu .menu_item .content_image img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s ease-out;
+    }
+    .section_menu .nav_menu .menu_item .content_item:hover img {
+      transform: scale(1.1);
+    }
+    /* SECTION: text_content menu item */
+    .section_menu .menu_item .content_item .content_wrap_desc_button {
+      display: flex;
+      margin-top: 1.62rem;
+      align-items: end;
+      gap: 4.12rem;
+    }
+    .section_menu .menu_item .content_item .content_wrap_desc_button .title {
+      color: #2a2a2a;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 2.1rem */
+      letter-spacing: -0.03rem;
+      margin-bottom: 0.62rem;
+    }
+    .section_menu .menu_item .content_item .content_wrap_desc_button .desc {
+      color: #6e6e6e;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 1.4625rem */
+      letter-spacing: -0.01125rem;
+    }
+    .section_menu
+      .menu_item
+      .content_item
+      .content_wrap_desc_button
+      .btn_viewmore {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      height: 3.75rem;
+      width: 12.4375rem;
+      border-radius: 3.125rem;
+      justify-content: center;
+      background: linear-gradient(90deg, #15a256 0%, #2c7234 100%);
+      color: #fff;
+      white-space: nowrap;
+      padding-bottom: 0.1rem;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.75rem */
+      letter-spacing: -0.0125rem;
+    }
+    .section_menu
+      .menu_item
+      .content_item
+      .content_wrap_desc_button
+      .btn_viewmore
+      .viewmore_icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .overLay_menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      z-index: 1001;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .overLay_menu.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media (max-width: 769px) {
+      #header {
+        height: 3.5rem;
+      }
+      #header .menu_btn {
+        display: none;
+      }
+      #header .logo {
+        width: 6.25rem;
+        height: 1.75rem;
+        right: auto;
+        left: 1rem;
+      }
+      #header .wrap_search_menu {
+        display: flex;
+        position: absolute;
+        right: 1rem;
+        align-items: center;
+      }
+      #header.slide_color_active .wrap_search_menu.white,
+      #header.slide_white_active .wrap_search_menu.color {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #header.slide_white_active .wrap_search_menu.white,
+      #header.slide_color_active .wrap_search_menu.color {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      #header .wrap_search_menu .search_icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+      #header .wrap_search_menu .menu_icon {
+        width: 1.75rem;
+      }
+      .section_menu.pc {
+        display: none;
+      }
+      .section_menu.mb {
+        display: block;
+        left: auto;
+        right: 0;
+        opacity: 1;
+        transition: all 0.5s ease-out;
+      }
+      .section_menu.mb.active {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <header id="header">
+      <div class="overlay_background"></div>
+      <button type="button" class="menu_btn white" onclick="handleOnMenu()">
+        <img src="./img/icon_menu_white.png" alt="" class="menu_icon" />
+        View menu
+      </button>
+      <button type="button" class="menu_btn color" onclick="handleOnMenu()">
+        <img src="./img/icon_menu_color.png" alt="" class="menu_icon" />
+        View menu
+      </button>
+      <img src="./img/Logo chuẩn.png" alt="" class="logo color" />
+      <img src="./img/Logo white.png" alt="" class="logo white" />
+      <div class="wrap_search_menu color">
+        <img
+          src="./img/imgMobile/Search_color.png"
+          alt=""
+          class="search_icon"
+        />
+        <img
+          src="./img/imgMobile/menu_color_icon.png"
+          alt=""
+          class="menu_icon"
+          onclick="handleOnMenu()"
+        />
+      </div>
+      <div class="wrap_search_menu white">
+        <img
+          src="./img/imgMobile/Search_white.png"
+          alt=""
+          class="search_icon"
+        />
+        <img
+          src="./img/imgMobile/menu_white_icon.png"
+          alt=""
+          class="menu_icon"
+          onclick="handleOnMenu()"
+        />
+      </div>
+    </header>
+    <section id="menu_component_pc" class="section_menu pc">
+      <img src="./img/Mask group zip.png" alt="" class="background_image" />
+      <img src="./img/sub_bg_menu.png" alt="" class="sub_bg_image" />
+      <div class="close_menu">
+        <img
+          src="./img/closeMenu_icon.png"
+          alt=""
+          class="icon"
+          onclick="handleCloseMenu()"
+        />
+        View menu
+      </div>
+      <ul class="nav_menu" id="nav_menu">
+        <li class="menu_item">
+          About VNK's
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/img_content1.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu_item">
+          Sustainable development
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/image_content2.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu_item">
+          Products
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content"></div>
+        </li>
+        <li class="menu_item">
+          Quality and factory
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/content_image3.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu_item">
+          Blog
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/content_image4.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu_item">
+          Contact
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/content_image5.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="menu_item">
+          Career opportunities
+          <img src="./img/arrow_menu_icon.svg" alt="" class="arrow_icon" />
+          <div class="content">
+            <div class="content_item">
+              <div class="content_image">
+                <img src="./img/tinified/content_image6.jpg" alt="" />
+              </div>
+              <div class="content_wrap_desc_button">
+                <div class="text_content">
+                  <h4 class="title">About VNK's</h4>
+                  <p class="desc">
+                    Our avant-garde facilities are a hub for sophisticated
+                    fabrication processes, ensuring every component is a paragon
+                    of quality
+                  </p>
+                </div>
+                <div>
+                  <a href="#link-detail" class="btn_viewmore">
+                    <span>View more</span>
+                    <img
+                      src="./img/arrow_detail_post.svg"
+                      alt=""
+                      class="viewmore_icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="menu_component_mb" class="section_menu mb">
+      <button type="button" onclick="handleCloseMenu()">Close</button>
+    </section>
+    <div
+      id="overLay_menu"
+      class="overLay_menu"
+      onclick="handleCloseMenu()"
+    ></div>
+    <!-- SECTION: slide banner -->
+    <section class="section_banner_homepage">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/Banner Home PC zip.jpg" class="background" />
+
+            <img src="./img/NGười zip.png" alt="" class="image_human" />
+            <div class="wrap_content_slide slide_item_1">
+              <h1 class="title">
+                <span class="wrap_animation">
+                  <span class="text"> The King Of </span>
+                </span>
+              </h1>
+              <h2 class="subtitle">
+                <span class="wrap_animation">
+                  <span class="text">Plastic Industry</span>
+                </span>
+              </h2>
+              <p class="description">
+                <span class="wrap_animation">
+                  <span class="text">
+                    <strong>The King of Vietnam's Plastic Industry</strong>.
+                    Your  trustful & reliable partner for Plastic packaging
+                    manufacturing and distribution industry.
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div class="coating_slide1"></div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/Property 1=Variant3 zip.jpg"
+              class="background pc"
+            />
+            <img src="./img/imgMobile/Banner mb.jpg" class="background mb" />
+            <img
+              src="./img/background_slide2 zip.png"
+              alt=""
+              class="background_opacity animated-element"
+            />
+            <div class="wrap_content_slide slide_item_2 animated-element">
+              <h1 class="title">
+                <span class="wrap_animation">
+                  <span class="text"> The King Of </span>
+                </span>
+              </h1>
+              <h2 class="subtitle">
+                <span class="wrap_animation">
+                  <span class="text">Plastic Industry</span>
+                </span>
+              </h2>
+              <p class="description">
+                <span class="wrap_animation">
+                  <span class="text">
+                    <strong>The King of Vietnam's Plastic Industry</strong>.
+                    Your  trustful & reliable partner for Plastic packaging
+                    manufacturing and distribution industry.
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div class="group_la pc animated-element">
+              <div class="wrap_animation_intro_product">
+                <img
+                  src="./img/Group_circle zip.png"
+                  alt=""
+                  class="group_circle"
+                />
+                <div class="content_la la1">
+                  <img src="./img/iconLa.png" alt="" class="icon_content" />
+                  <p class="title"><strong>Variety</strong> of print colors</p>
+                  <img src="./img/la1.png" alt="" />
+                </div>
+                <div class="content_la la2">
+                  <img src="./img/iconLa.png" alt="" class="icon_content" />
+                  <p class="title"><strong>Variety</strong> of print colors</p>
+                  <img src="./img/la2.png" alt="" />
+                </div>
+                <div class="content_la la3">
+                  <img src="./img/iconLa.png" alt="" class="icon_content" />
+                  <p class="title"><strong>Variety</strong> of print colors</p>
+                  <img src="./img/la3.png" alt="" />
+                </div>
+                <div class="content_la la4">
+                  <img src="./img/iconLa.png" alt="" class="icon_content" />
+                  <p class="title"><strong>Variety</strong> of print colors</p>
+                  <img src="./img/la4.png" alt="" />
+                </div>
+                <img src="./img/Frame.png" alt="" class="circle" />
+                <div class="wrap_product">
+                  <img src="./img/product.png" alt="" class="product_item" />
+                </div>
+              </div>
+            </div>
+            <div class="group_la mb">
+              <img
+                src="./img/imgMobile/inforgrap.png"
+                alt=""
+                class="group_la-background"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="body_item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, a
+        aliquid! Eveniet deserunt fuga non voluptatum, accusamus ducimus in quo,
+        nemo odio ab, numquam sit. Non nemo earum cumque. Ipsa?
+        <div class="svg-like"></div>
+      </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="../../../js/gsap.js"></script>
+    <script src="../../../js/gsap.min.js"></script>
+    <script src="../../../js/ScrollTrigger.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

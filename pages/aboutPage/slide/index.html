@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../assets/global.css" />
+    <link rel="stylesheet" href="../../../assets/reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <style>
+    .aboutUs_slider .slider1 {
+      list-style-type: none;
+    }
+    .aboutUs_slider .slider1 li {
+      color: #c3c3c3;
+      leading-trim: both;
+      text-edge: cap;
+      font-size: 1.875rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%; /* 2.25rem */
+    }
+  </style>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <section class="aboutUs_slider">
+          <ul class="slider1">
+            <li>2015</li>
+            <li>2016</li>
+            <li>2017</li>
+            <li>2018</li>
+            <li class="active">2019</li>
+            <li>2020</li>
+            <li>2021</li>
+            <li>2022</li>
+            <li>2023</li>
+            <li>2024</li>
+          </ul>
+          <button class="slider_button slider_button_prev">prev</button>
+          <button class="slider_button slider_button_next">next</button>
+        </section>
+      </div>
+    </div>
+    <script src="../../../js/gsap.js"></script>
+    <script src="../../../js/gsap.min.js"></script>
+    <script src="../../../js/ScrollSmoother.min.js"></script>
+    <script src="../../../js/ScrollTrigger.min.js"></script>
+    <script src="../../../js/kKao4HeadingTable.js"></script>
+    <script src="../../../js/ScrollToPlugin.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
