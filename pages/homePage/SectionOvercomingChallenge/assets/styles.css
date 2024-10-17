@@ -1,0 +1,198 @@
+@import url("../../../../assets/style/global.css");
+@import url("../../../../assets/style/reset.css");
+
+/* SECTION: section năng lực thực thi */
+
+.overcoming_challenge_section {
+  height: 59.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6.52rem;
+  background: #f6f7f7;
+}
+
+.overcoming_challenge_section .section_title {
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 57.70506rem;
+  text-align: center;
+  font-family: "Averta Std CY";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  letter-spacing: -0.14rem;
+  margin-bottom: 4.28rem;
+}
+
+.overcoming_challenge_section .section_content {
+  overflow: hidden;
+  height: fit-content;
+  width: 100%;
+}
+
+.overcoming_challenge_section .section_content > div {
+  width: max-content;
+  /* animation: moveSlideshow 12s linear infinite; */
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.overcoming_challenge_section .section_content > div [class*="line"] {
+  display: flex;
+}
+
+.overcoming_challenge_section .section_content > div .line_1 .img_container {
+  margin-bottom: 0.5rem;
+}
+
+.overcoming_challenge_section .section_content > div .line_2 {
+  transform: translateX(-6.48rem);
+}
+
+.overcoming_challenge_section .section_content > div .img_container {
+  width: 21.875rem;
+  height: 13.75rem;
+  flex-shrink: 0;
+  border-radius: var(--16, 1rem);
+  margin-right: 0.5rem;
+  overflow: hidden;
+}
+
+.overcoming_challenge_section .section_content > div .img_container img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s linear;
+}
+.overcoming_challenge_section .section_content > div .img_container:hover img {
+  transform: scale(1.1);
+}
+
+.overcoming_challenge_section .see_more_btn {
+  padding: 1rem var(--36, 2.25rem);
+  border-radius: 3.125rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+  margin-top: 3.06rem;
+}
+
+.overcoming_challenge_section .see_more_btn span {
+  color: var(--text-body-inverse-white-inverse, #fff);
+  font-family: "Averta Std CY";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.75rem */
+  letter-spacing: -0.0125rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s linear;
+}
+
+.overcoming_challenge_section .see_more_btn span svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  transition: all 0.4s linear;
+}
+
+.overcoming_challenge_section .see_more_btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 0rem;
+  background: #7ef4b3;
+  transition: all 0.4s linear;
+}
+
+.overcoming_challenge_section .see_more_btn:hover::after {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.overcoming_challenge_section .see_more_btn:hover span {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+}
+
+.overcoming_challenge_section .see_more_btn:hover path {
+  stroke: var(--Text-Body-Body-50---Main, #2a2a2a);
+}
+
+@media (max-width: 769px) {
+  .overcoming_challenge_section {
+    height: fit-content;
+    padding: 2.5rem 0;
+  }
+
+  .overcoming_challenge_section .section_title {
+    width: 100%;
+    text-align: center;
+    font-family: "Averta Std CY";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.035rem;
+    margin-bottom: 2.5rem;
+  }
+  .overcoming_challenge_section .section_content > div .line_1 .img_container {
+    margin-bottom: 0.37rem;
+  }
+
+  .overcoming_challenge_section .section_content > div .line_2 {
+    transform: translateX(-3.82rem);
+  }
+
+  .overcoming_challenge_section .section_content > div .img_container {
+    width: 12.89394rem;
+    height: 8.10475rem;
+    border-radius: 0.58944rem;
+    margin-right: 0.29rem;
+    overflow: hidden;
+  }
+
+  .overcoming_challenge_section .see_more_btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    pointer-events: none;
+  }
+
+  .overcoming_challenge_section .see_more_btn span {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: -0.01rem;
+    z-index: 1;
+    transition: all 0.4s linear;
+  }
+
+  .overcoming_challenge_section .see_more_btn span svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-left: 0.31rem;
+    transition: all 0.4s linear;
+  }
+}

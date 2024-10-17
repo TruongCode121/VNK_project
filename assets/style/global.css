@@ -105,6 +105,7 @@ img {
   font-weight: 900;
 }
 
+
 .h2,
 .h2 p {
   font-size: 3.5rem;
@@ -116,3 +117,55 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ookisan custom css start*/
+
+@media (min-width: 770px) {
+  .underline-animation_multiLine {
+    display: inline;
+    position: relative;
+    transition: background-size 0.25s;
+    background: var(
+        --Text-Title-H2,
+        linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+      )
+      no-repeat 100% 100%/0 1px;
+  }
+  .underline-animation_multiLine:hover {
+    color: #15a256;
+    background-size: 100% 1.2px;
+    background-position-x: left;
+  }
+  .underline-animation_multiLine span {
+    background: var(--Text-Title-H2, linear-gradient(90deg, #2A2A2A 0%, #2A2A2A 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .underline-animation_multiLine:hover span {
+    background: var(--Text-Title-H2, linear-gradient(90deg, #15A256 0%, #2C7234 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.multiple_color_grey span {
+  -webkit-text-fill-color: #828282;
+  color: #828282;
+}
+
+.multiple_color_black span {
+  -webkit-text-fill-color: #2A2A2A;
+  color: #2A2A2A;
+}
+/* ookisan custom css end*/
+
