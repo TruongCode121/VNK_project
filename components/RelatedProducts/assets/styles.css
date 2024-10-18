@@ -1,0 +1,267 @@
+@import url("../../../assets/style/global.css");
+@import url("../../../assets/style/reset.css");
+@import url("../../CustomeBtn/styles.css");
+
+.relatedProductSection {
+  display: flex;
+  width: 100%;
+  padding: 2rem 7.5rem 5rem 7.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.relatedProductSection .section_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+
+.relatedProductSection .see_more_btn_mb{
+  display: none;
+}
+
+.relatedProductSection .section_header .section_title {
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Averta Std CY";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  letter-spacing: -0.14rem;
+}
+
+.relatedProductSection .section_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.relatedProductSection .section_content .product_item {
+  position: relative;
+  width: 20.26588rem;
+  height: 23.1875rem;
+  border-radius: var(--16, 1rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.19rem;
+  overflow: hidden;
+}
+
+.relatedProductSection .section_content .product_item img {
+  width: 20.26563rem;
+  height: 16.25rem;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 2.32rem;
+}
+
+.relatedProductSection .section_content .product_item p {
+  width: 20.26563rem;
+  color: var(--Text-Scale-70, #313131);
+  text-align: center;
+  font-family: "Averta Std CY";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 1.3125rem */
+  letter-spacing: -0.00875rem;
+  text-transform: uppercase;
+  height: 16.25rem;
+  position: relative;
+  z-index: 3;
+  transition: all 0.4s ease-out;
+}
+
+.relatedProductSection .section_content .product_item svg {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 16.77rem;
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.4s ease-out;
+}
+
+.relatedProductSection .section_content .product_item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 53, 8, 0.08) 0%,
+      rgba(0, 53, 8, 0.08) 100%
+    ),
+    #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.relatedProductSection .section_content .product_item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: var(--12, 0.75rem);
+  background: var(--Color-1, linear-gradient(180deg, #15a256 0%, #2c7234 100%));
+  z-index: 2;
+  height: 0;
+  transition: all 0.4s ease-out;
+}
+
+.relatedProductSection .section_content .product_item:hover svg {
+  opacity: 1;
+}
+
+.relatedProductSection .section_content .product_item:hover::after {
+  opacity: 1;
+}
+
+.relatedProductSection .section_content .product_item:hover::before {
+  height: 10rem;
+}
+
+.relatedProductSection .section_content .product_item:hover p {
+  margin-top: -0.67rem;
+  color: var(--text-body-inverse-white-inverse, #fff);
+}
+
+@media (max-width: 769px) {
+  .relatedProductSection {
+    padding: 2.5rem 0.75rem 0rem 0.75rem;
+  }
+  
+  .relatedProductSection .section_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .relatedProductSection .see_more_btn_mb{
+    display: block;
+    align-self: center;
+    margin-top: 2rem;
+  }
+  
+  .relatedProductSection .see_more_btn_pc{
+    display: none;
+  }
+
+  .relatedProductSection .section_header .section_title {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 2.1rem */
+    letter-spacing: -0.035rem;    
+  }
+  
+  .relatedProductSection .section_content {
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* Tạo 2 cột bằng cách chia đều */
+  grid-template-rows: auto auto; /* Tạo 2 hàng với chiều cao tự động */
+  gap: 1rem;
+    width: 100%;
+  }
+  
+  .relatedProductSection .section_content .product_item {
+    position: relative;
+    width: 10.46875rem;
+    height: 12.5rem;
+    border-radius: var(--12, 0.75rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.56rem;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .relatedProductSection .section_content .product_item img {
+    width: 10.625rem;
+    height: 8.5rem;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 0.56rem;
+  }
+  
+  .relatedProductSection .section_content .product_item p {
+    width: 9.21875rem;
+    color: var(--text-body-inverse-white-inverse, #FFF);
+text-align: center;
+font-family: "Averta Std CY";
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 0.9rem */
+letter-spacing: -0.0075rem;
+text-transform: uppercase;
+  }
+  
+  .relatedProductSection .section_content .product_item svg {
+    display: none;
+  }
+  
+  .relatedProductSection .section_content .product_item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 53, 8, 0.08) 0%,
+        rgba(0, 53, 8, 0.08) 100%
+      ),
+      #fff;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.4s ease-out;
+  }
+  
+  .relatedProductSection .section_content .product_item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 0.38rem * 2);
+    border-radius: var(--12, 0.75rem);
+    background: var(--Color-1, linear-gradient(180deg, #15a256 0%, #2c7234 100%));
+    z-index: 2;
+    height: 6.25rem;
+    transition: all 0.4s ease-out;
+    margin: 0 0.38rem 0.38rem 0.38rem;
+  }
+  
+  .relatedProductSection .section_content .product_item:hover svg {
+    opacity: 1;
+  }
+  
+  .relatedProductSection .section_content .product_item:hover::after {
+    opacity: 1;
+  }
+  
+  .relatedProductSection .section_content .product_item:hover::before {
+    height: 10rem;
+  }
+  
+  .relatedProductSection .section_content .product_item:hover p {
+    margin-top: -0.67rem;
+    color: var(--text-body-inverse-white-inverse, #fff);
+  }
+}
