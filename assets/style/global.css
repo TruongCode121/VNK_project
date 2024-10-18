@@ -105,6 +105,19 @@ img {
   font-weight: 900;
 }
 
+
+.h2,
+.h2 p {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.14rem;
+  background: linear-gradient(90deg, #15a256 0%, #2c7234 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* ookisan custom css start*/
 
 @media (min-width: 770px) {
@@ -155,3 +168,4 @@ img {
   color: #2A2A2A;
 }
 /* ookisan custom css end*/
+
