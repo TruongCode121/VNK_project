@@ -56,7 +56,7 @@
 .section_our_categorie .slide_product .swiper-slide:hover .product_img {
   transform: translateY(-1rem) scale(1.1);
 }
-.section_our_categorie .slide_product .swiper-slide .trapezoid {
+.section_our_categorie .slide_product .swiper-slide:nth-child(odd) .trapezoid {
   height: 5rem;
   width: 100%;
   flex-shrink: 0;
@@ -66,7 +66,7 @@
   border-radius: 0.5rem;
   transition: all 0.4s ease-out;
 }
-.section_our_categorie .slide_product .swiper-slide .trapezoid_reverse {
+.section_our_categorie .slide_product .swiper-slide:nth-child(even) .trapezoid {
   height: 5rem;
   flex-shrink: 0;
   background-color: #fff; /* Màu sắc của hình thang */
@@ -75,11 +75,17 @@
   border-radius: 0.5rem;
   transition: all 0.4s ease-out;
 }
-.section_our_categorie .slide_product .swiper-slide:hover .trapezoid {
+.section_our_categorie
+  .slide_product
+  .swiper-slide:nth-child(odd):hover
+  .trapezoid {
   transform: perspective(0.2rem) rotateX(1deg) scale(0.9);
   background-color: #1c934b;
 }
-.section_our_categorie .slide_product .swiper-slide:hover .trapezoid_reverse {
+.section_our_categorie
+  .slide_product
+  .swiper-slide:nth-child(even):hover
+  .trapezoid {
   transform: perspective(0.2rem) rotateX(-181deg) scale(0.9);
   background-color: #1c934b;
 }
