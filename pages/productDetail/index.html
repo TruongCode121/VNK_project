@@ -15,12 +15,12 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <style>
-    .swiper {
+    .wrap_product_detail .product_image .swiper {
       width: 100%;
       height: 100%;
     }
 
-    .swiper-slide {
+    .wrap_product_detail .product_image .swiper-slide {
       text-align: center;
       font-size: 18px;
       background: #fff;
@@ -29,136 +29,264 @@
       align-items: center;
     }
 
-    .swiper-slide img {
+    .wrap_product_detail .product_image .swiper-slide img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .swiper {
+    .wrap_product_detail .product_image .swiper {
       width: 100%;
       height: 300px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .swiper-slide {
+    .wrap_product_detail .product_image .swiper-slide {
       background-size: cover;
       background-position: center;
     }
 
-    .mySwiper2 {
+    .wrap_product_detail .product_image .mySwiper2 {
       height: 80%;
       width: 100%;
     }
 
-    .mySwiper {
+    .wrap_product_detail .product_image .mySwiper {
       height: 20%;
       box-sizing: border-box;
       padding: 10px 0;
     }
 
-    .mySwiper .swiper-slide {
+    .wrap_product_detail .product_image .mySwiper .swiper-slide {
       width: 25%;
       height: 100%;
       opacity: 0.4;
     }
 
-    .mySwiper .swiper-slide-thumb-active {
+    .wrap_product_detail .product_image .mySwiper .swiper-slide-thumb-active {
       opacity: 1;
     }
 
-    .swiper-slide img {
+    .wrap_product_detail .product_image .swiper-slide img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    /* slider product */
+    .product_detail_page .slide_product .swiper-slide {
+      cursor: pointer;
+      position: relative;
+      padding-top: 5rem;
+    }
+    .product_detail_page .slide_product .swiper-slide .elippse_prd {
+      position: absolute;
+      top: calc(50% + 4rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4.53819rem;
+      height: 2.57588rem;
+      flex-shrink: 0;
+      border-radius: 4.53819rem;
+      background: radial-gradient(
+        84.84% 86.57% at 50% 50%,
+        #242424 0%,
+        rgba(75, 75, 75, 0) 100%
+      );
+      filter: blur(15px);
+    }
+    .product_detail_page
+      .slide_product
+      .swiper-slide.reverse_slide
+      .elippse_prd {
+      top: calc(50% + 2.5rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .product_detail_page .slide_product .swiper-slide .wrap_img_content {
+      height: auto;
+      position: absolute;
+      top: 3rem;
+    }
+    .product_detail_page
+      .slide_product
+      .swiper-slide
+      .wrap_img_content
+      .product_img {
+      width: 11.75rem;
+      height: 8.875rem;
+      flex-shrink: 0;
+      transition: all 0.4s ease-out;
+    }
+    .product_detail_page .slide_product .swiper-slide .wrap_img_content .desc {
+      color: #313131;
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%; /* 1.1375rem */
+      letter-spacing: -0.00875rem;
+      margin-top: 2.7rem;
+    }
+    .product_detail_page .slide_product .swiper-slide:hover .product_img {
+      transform: translateY(-1rem) scale(1.1);
+    }
+    .product_detail_page .slide_product .swiper-slide .trapezoid {
+      height: 5rem;
+      width: 100%;
+      flex-shrink: 0;
+      background-color: #fff; /* Màu sắc của hình thang */
+      transform: perspective(0.2rem) rotateX(1deg);
+      margin: 3rem auto 1rem;
+      border-radius: 0.5rem;
+      transition: all 0.4s ease-out;
+    }
+    .product_detail_page .slide_product .swiper-slide .trapezoid_reverse {
+      height: 5rem;
+      flex-shrink: 0;
+      background-color: #fff; /* Màu sắc của hình thang */
+      transform: perspective(0.2rem) rotateX(-181deg);
+      margin: 4rem auto 2.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.4s ease-out;
+    }
+    .product_detail_page .slide_product .swiper-slide:hover .trapezoid {
+      transform: perspective(0.2rem) rotateX(1deg) scale(0.9);
+      background-color: #1c934b;
+    }
+    .product_detail_page .slide_product .swiper-slide:hover .trapezoid_reverse {
+      transform: perspective(0.2rem) rotateX(-181deg) scale(0.9);
+      background-color: #1c934b;
+    }
+    .product_detail_page .slide_product .swiper {
+      width: 85rem; /* Hiển thị 6 phần tử mỗi lần */
+      margin: auto;
+      padding: 0 2.5rem;
     }
   </style>
   <body>
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <section class="product_detail_page">
-          <div class="wrap_product_detail">
-            <div class="slider_product">
-              <div
-                style="
-                  --swiper-navigation-color: #fff;
-                  --swiper-pagination-color: #fff;
-                "
-                class="swiper mySwiper2"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <div class="wrap_product_detail container">
+            <div class="product_image">
+              <div class="slider_product_detail">
+                <div
+                  style="
+                    --swiper-navigation-color: #fff;
+                    --swiper-pagination-color: #fff;
+                  "
+                  class="swiper mySwiper2"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-1.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-2.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-3.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-4.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-5.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-6.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-7.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-8.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-9.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-10.jpg"
+                      />
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="https://swiperjs.com/demos/images/nature-10.jpg"
-                    />
-                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-              <div thumbsSlider="" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      src="https://swiperjs.com/demos/images/nature-10.jpg"
-                    />
+                <div thumbsSlider="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-1.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-2.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-3.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-4.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-5.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-6.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-7.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-8.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-9.jpg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="https://swiperjs.com/demos/images/nature-10.jpg"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -195,7 +323,7 @@
               </div>
               <div class="accordion_product_detail">
                 <div class="accordion_product-item">
-                  <div class="accordion_product-header">
+                  <div class="accordion_product-header active">
                     <h3 class="title">Product Description</h3>
                     <div class="accordion_icon">
                       <svg
@@ -229,93 +357,96 @@
                     </div>
                   </div>
                   <div class="accordion_product-content">
-                    <table>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Our products</li>
-                          </ul>
-                        </td>
-                        <td>
-                          Flexi loop handle bag, rigid handle bag, tri fold bag,
-                          ribbon handle bag, t shirt/ vest carrier bag, T- shirt
-                          bag with block header, die cut bag, block header bag,
-                          mailing bag, coextruded bag, garbage bags, flat bag on
-                          rolls, patch handle bag, drawstring/ draw tape bag,
-                          wave top bag (varigauge bag), zipper bag, and so forth
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Our products</li>
-                          </ul>
-                        </td>
-                        <td>
-                          HDPE/ LDPE/ LLDPE/MDPE, PP, OPP virgin or recycled,
-                          biodegradable additive, degradable as EPI or D2W
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Our products</li>
-                          </ul>
-                        </td>
-                        <td>
-                          Any size customize or use our standard size (S, M, L,
-                          XL as option, Email us and ask for catalogue)
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Size:</li>
-                          </ul>
-                        </td>
-                        <td>As customers’ requirement</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Specifications:</li>
-                          </ul>
-                        </td>
-                        <td>As customers’ requirement</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Bag color:</li>
-                          </ul>
-                        </td>
-                        <td>Any color as choice</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Printing:</li>
-                          </ul>
-                        </td>
-                        <td>
-                          Max to 12 colors design available/ CMYK,  Hot Foil,
-                          stamping, embossing, 100% ink coverage
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <ul>
-                            <li>Printing Technology:</li>
-                          </ul>
-                        </td>
-                        <td>Gravure or Flexo</td>
-                      </tr>
-                    </table>
+                    <div class="wrapper_content">
+                      <table>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Flexi loop handle bag, rigid handle bag, tri fold
+                            bag, ribbon handle bag, t shirt/ vest carrier bag,
+                            T- shirt bag with block header, die cut bag, block
+                            header bag, mailing bag, coextruded bag, garbage
+                            bags, flat bag on rolls, patch handle bag,
+                            drawstring/ draw tape bag, wave top bag (varigauge
+                            bag), zipper bag, and so forth
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            HDPE/ LDPE/ LLDPE/MDPE, PP, OPP virgin or recycled,
+                            biodegradable additive, degradable as EPI or D2W
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Any size customize or use our standard size (S, M,
+                            L, XL as option, Email us and ask for catalogue)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Size:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Specifications:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Bag color:</li>
+                            </ul>
+                          </td>
+                          <td>Any color as choice</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing:</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Max to 12 colors design available/ CMYK,  Hot Foil,
+                            stamping, embossing, 100% ink coverage
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing Technology:</li>
+                            </ul>
+                          </td>
+                          <td>Gravure or Flexo</td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
                 <div class="accordion_product-item">
                   <div class="accordion_product-header">
-                    <h3 class="title">Product Description</h3>
+                    <h3 class="title">Purchase Policy</h3>
                     <div class="accordion_icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -347,11 +478,97 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="accordion_product-content"></div>
+                  <div class="accordion_product-content">
+                    <div class="wrapper_content">
+                      <table>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Flexi loop handle bag, rigid handle bag, tri fold
+                            bag, ribbon handle bag, t shirt/ vest carrier bag,
+                            T- shirt bag with block header, die cut bag, block
+                            header bag, mailing bag, coextruded bag, garbage
+                            bags, flat bag on rolls, patch handle bag,
+                            drawstring/ draw tape bag, wave top bag (varigauge
+                            bag), zipper bag, and so forth
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            HDPE/ LDPE/ LLDPE/MDPE, PP, OPP virgin or recycled,
+                            biodegradable additive, degradable as EPI or D2W
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Any size customize or use our standard size (S, M,
+                            L, XL as option, Email us and ask for catalogue)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Size:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Specifications:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Bag color:</li>
+                            </ul>
+                          </td>
+                          <td>Any color as choice</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing:</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Max to 12 colors design available/ CMYK,  Hot Foil,
+                            stamping, embossing, 100% ink coverage
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing Technology:</li>
+                            </ul>
+                          </td>
+                          <td>Gravure or Flexo</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
                 <div class="accordion_product-item">
                   <div class="accordion_product-header">
-                    <h3 class="title">Product Description</h3>
+                    <h3 class="title">Payment Guide</h3>
                     <div class="accordion_icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -383,9 +600,278 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="accordion_product-content"></div>
+                  <div class="accordion_product-content">
+                    <div class="wrapper_content">
+                      <table>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Flexi loop handle bag, rigid handle bag, tri fold
+                            bag, ribbon handle bag, t shirt/ vest carrier bag,
+                            T- shirt bag with block header, die cut bag, block
+                            header bag, mailing bag, coextruded bag, garbage
+                            bags, flat bag on rolls, patch handle bag,
+                            drawstring/ draw tape bag, wave top bag (varigauge
+                            bag), zipper bag, and so forth
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            HDPE/ LDPE/ LLDPE/MDPE, PP, OPP virgin or recycled,
+                            biodegradable additive, degradable as EPI or D2W
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Our products</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Any size customize or use our standard size (S, M,
+                            L, XL as option, Email us and ask for catalogue)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Size:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Specifications:</li>
+                            </ul>
+                          </td>
+                          <td>As customers’ requirement</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Bag color:</li>
+                            </ul>
+                          </td>
+                          <td>Any color as choice</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing:</li>
+                            </ul>
+                          </td>
+                          <td>
+                            Max to 12 colors design available/ CMYK,  Hot Foil,
+                            stamping, embossing, 100% ink coverage
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <ul>
+                              <li>Printing Technology:</li>
+                            </ul>
+                          </td>
+                          <td>Gravure or Flexo</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <!-- SECTION: contact form -->
+          <div class="wrap_contact_form container">
+            <div class="contact_form"></div>
+            <div class="content">
+              <p class="subtitle">Let’s Talk Savings</p>
+              <h2 class="title">
+                Experience substantial savings on your order with our
+                competitive pricing
+              </h2>
+            </div>
+          </div>
+          <div class="other_products container">
+            <div class="heading_product">
+              <h2 class="title">Explore Related Products</h2>
+              <a href="" class="btn_seemore">
+                <span class="coating_btn"></span>
+                <span class="value_btn">See more</span>
+              </a>
+            </div>
+            <!-- SECTION: product list -->
+            <div class="product_list">
+              <a href="#detail_product" class="product_item">
+                <img src="./img/arrow_product.svg" class="icon" alt="" />
+                <span class="coating_product"></span>
+                <img src="./img/product1.png" alt="" class="image_product" />
+                <span class="name_product">Plastic bags with rigid handle</span>
+              </a>
+              <a href="#detail_product" class="product_item">
+                <img src="./img/arrow_product.svg" class="icon" alt="" />
+                <span class="coating_product"></span>
+                <img src="./img/product2.png" alt="" class="image_product" />
+                <span class="name_product">Plastic bags with rigid handle</span>
+              </a>
+              <a href="#detail_product" class="product_item">
+                <img src="./img/arrow_product.svg" class="icon" alt="" />
+                <span class="coating_product"></span>
+                <img src="./img/product3.png" alt="" class="image_product" />
+                <p class="name_product">Plastic bags with rigid handle</p>
+              </a>
+              <a href="#detail_product" class="product_item">
+                <img src="./img/arrow_product.svg" class="icon" alt="" />
+                <span class="coating_product"></span>
+                <img src="./img/product4.png" alt="" class="image_product" />
+                <span class="name_product">Plastic bags with rigid handle</span>
+              </a>
+            </div>
+          </div>
+          <!-- SECTION: banner product -->
+          <div class="banner_product">
+            <div class="banner_text_auto_slide">
+              <div class="text_slide">
+                <h2 class="title_item">Products</h2>
+              </div>
+              <div class="text_slide">
+                <h2 class="title_item">Products</h2>
+              </div>
+            </div>
+            <img
+              src="./img/Ellipse 3211.png"
+              class="ellipse_bg_prd_slide"
+              alt=""
+            />
+            <img
+              src="./img/Group_prd_banner.png"
+              alt=""
+              class="banner_group_product"
+            />
+          </div>
+          <div class="slide_product">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- 12 phần tử -->
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi nhựa.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi rác.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img
+                      src="./img/Túi sinh học.png"
+                      alt=""
+                      class="product_img"
+                    />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Khuôn@3x.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi giấy.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi vải.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi nhựa.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi rác.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img
+                      src="./img/Túi sinh học.png"
+                      alt=""
+                      class="product_img"
+                    />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Khuôn@3x.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="trapezoid"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi giấy.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+                <div class="swiper-slide reverse_slide">
+                  <div class="trapezoid_reverse"></div>
+                  <div class="elippse_prd"></div>
+                  <div class="wrap_img_content">
+                    <img src="./img/Túi vải.png" alt="" class="product_img" />
+                    <p class="desc">Paper Products</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Nút điều khiển -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
         </section>
