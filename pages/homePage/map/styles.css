@@ -1,0 +1,45 @@
+.experience {
+  position: relative;
+}
+.experience__wrapper {
+  position: relative;
+  padding-top: 28.06rem;
+  overflow: hidden;
+}
+.experience__bg {
+  position: absolute;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 18.38rem;
+}
+.experience__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.experience__map {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.experience__map svg {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.experience__map svg path:hover {
+  fill: #a88f10;
+  stroke-width: 0.16px;
+  stroke: var(--Real-green-600, #16954f);
+  filter: drop-shadow(-2px 5px 0px rgba(0, 76, 9, 0.77));
+}
+.experience__map .nation:hover {
+  fill: #10a854;
+  stroke-width: 0.16px;
+  stroke: var(--Real-green-600, #16954f);
+  filter: drop-shadow(-2px 5px 0px rgba(0, 76, 9, 0.77));
+}/*# sourceMappingURL=styles.css.map */

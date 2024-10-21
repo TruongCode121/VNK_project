@@ -1,79 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../../assets/style/global.css" />
-    <link rel="stylesheet" href="../../../assets/style/reset.css" />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <section class="homepage__dual homepage__box">
-      <div class="homepage__dual-bg">
-        <img
-          src="/pages/homePage/sectionDual/imgs/background.webp"
-          alt=""
-          class="dual-bg"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
-        <img
-          src="/pages/homePage/sectionDual/imgs/image1.png"
-          alt="vnks"
-          class="dual-img1"
-        />
-        <img
-          src="/pages/homePage/sectionDual/imgs/image2.png"
-          alt="vnks"
-          class="dual-img2"
-        />
-      </div>
+        <link rel="stylesheet" href="../../../assets/style/global.css" />
+        <link rel="stylesheet" href="../../../assets/style/reset.css" />
 
-      <div class="homepage__dual-content">
-        <h2 class="h2">
-          <p>Dual closed</p>
-          <p>production process</p>
-        </h2>
-        <p class="homepage__content">
-          We take pride in our advanced plastic production process, ensuring
-          superior quality and consistency in every product. Our process is
-          optimized to meet the diverse needs of our customers, from mass
-          production to custom orders.
-        </p>
-      </div>
-    </section>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body style="padding-bottom: 50rem">
+        <section class="homepage__parallax-wrapper">
+            <div class="homepage__parallax-container">
+                <div
+                    class="homepage__parallax-item homepage__dual homepage__box"
+                >
+                    <div class="homepage__dual-bg">
+                        <img
+                            src="/pages/homePage/sectionDual/imgs/background.webp"
+                            alt=""
+                            class="dual-bg"
+                        />
+                        <!-- <img
+                            src="/pages/homePage/sectionDual/imgs/image1.png"
+                            alt="vnks"
+                            class="dual-img1"
+                        /> -->
+                        <img
+                            src="/pages/homePage/sectionDual/imgs/image1-mb.png"
+                            alt="vnks"
+                            class="dual-img1"
+                        />
+                        <!-- <img
+                            src="/pages/homePage/sectionDual/imgs/image2.png"
+                            alt="vnks"
+                            class="dual-img2"
+                        /> -->
+                        <img
+                            src="/pages/homePage/sectionDual/imgs/image2.png"
+                            alt="vnks"
+                            class="dual-img2"
+                        />
+                    </div>
 
-    <section class="homepage__expanding homepage__box">
-      <div class="homepage__expanding-content">
-        <h2 class="h2">
-          <p>Expanding as</p>
-          <p>Vietnam's Plastic Leader</p>
-        </h2>
-        <p class="homepage__content">
-          VNK's aims to grow and become a symbol of Vietnam's plastic industry
-          globally, investing in technology, expanding its product line, and
-          improving service quality.
-        </p>
-      </div>
-      <img
-        src="/pages/homePage/sectionDual/imgs/tree.png"
-        alt=""
-        class="homepage__expanding-bg1"
-      />
-      <img
-        src="/pages/homePage/sectionDual/imgs/bg2.png"
-        alt=""
-        class="homepage__expanding-bg2"
-      />
+                    <div class="homepage__dual-content">
+                        <h2 class="h2">
+                            <p>Dual closed</p>
+                            <p>production process</p>
+                        </h2>
+                        <p class="homepage__content">
+                            We take pride in our advanced plastic production
+                            process, ensuring superior quality and consistency
+                            in every product. Our process is optimized to meet
+                            the diverse needs of our customers, from mass
+                            production to custom orders.
+                        </p>
+                        <a class="homepage__dual-link" href="#"
+                            >Quality and factory</a
+                        >
+                    </div>
+                </div>
+                <div
+                    class="homepage__parallax-item homepage__expanding homepage__box"
+                >
+                    <div class="homepage__expanding-content">
+                        <h2 class="h2">
+                            <p>Expanding as</p>
+                            <p>Vietnam's Plastic Leader</p>
+                        </h2>
+                        <p class="homepage__content">
+                            VNK's aims to grow and become a symbol of Vietnam's
+                            plastic industry globally, investing in technology,
+                            expanding its product line, and improving service
+                            quality.
+                        </p>
+                    </div>
+                    <img
+                        src="/pages/homePage/sectionDual/imgs/tree.png"
+                        alt=""
+                        class="homepage__expanding-bg1"
+                    />
+                    <img
+                        src="/pages/homePage/sectionDual/imgs/bg2.png"
+                        alt=""
+                        class="homepage__expanding-bg2"
+                    />
 
-      <div class="homepage__expanding-video">
-        <img src="" alt="" class="homepage__expanding-thumb" />
-        <img src="" alt="" class="homepage__expanding-playbtn" />
-        <video class="homepage__expanding-vid"></video>
-      </div>
-    </section>
+                    <div class="expanding__video">
+                        <video
+                            muted
+                            class="expanding__video-content"
+                            poster="./imgs/Rectangle 34626707.png"
+                        >
+                            <source
+                                src="./imgs/-91cb-4bf4-9049-3532417328d8.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="expanding__video-btn">
+                            <img src="./imgs/Group 11.svg" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="main-product__wrapper">
+                    <div class="main-product__bg"></div>
+                    <div class="main-product">
+                        <div class="main-product__header">
+                            <h2>Main product line</h2>
+                        </div>
+                        <nav class="swiper main-product__nav">
+                            <ul class="swiper-wrapper main-product__list">
+                                <li
+                                    class="swiper-slide active main-product__list-tem"
+                                >
+                                    Food packaging
+                                </li>
+                                <li class="swiper-slide main-product__list-tem">
+                                    Shipping bag
+                                </li>
+                                <li class="swiper-slide main-product__list-tem">
+                                    Shopping bag
+                                </li>
+                                <li class="swiper-slide main-product__list-tem">
+                                    Trash bag
+                                </li>
+                                <li class="swiper-slide main-product__list-tem">
+                                    Injection Moulding Products
+                                </li>
+                                <li class="swiper-slide main-product__list-tem">
+                                    Uncatagorized
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="main-product__items-wrapper">
+                            <div class="main-product__items swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="main-product__item">
+                                            <img
+                                                class="main-product__img"
+                                                src="./imgs/product.png"
+                                                alt=""
+                                            />
+                                            <div class="main-product__info">
+                                                <p class="main-product__code">
+                                                    VNK’S - 6168
+                                                </p>
+                                                <p class="main-product__name">
+                                                    Mailing –Coex bag
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="main-product__item">
+                                            <img
+                                                class="main-product__img"
+                                                src="./imgs/product.png"
+                                                alt=""
+                                            />
+                                            <div class="main-product__info">
+                                                <p class="main-product__code">
+                                                    VNK’S - 6168
+                                                </p>
+                                                <p class="main-product__name">
+                                                    Mailing –Coex bag
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="main-product__item">
+                                            <img
+                                                class="main-product__img"
+                                                src="./imgs/product.png"
+                                                alt=""
+                                            />
+                                            <div class="main-product__info">
+                                                <p class="main-product__code">
+                                                    VNK’S - 6168
+                                                </p>
+                                                <p class="main-product__name">
+                                                    Mailing –Coex bag
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="main-product__item">
+                                            <img
+                                                class="main-product__img"
+                                                src="./imgs/product.png"
+                                                alt=""
+                                            />
+                                            <div class="main-product__info">
+                                                <p class="main-product__code">
+                                                    VNK’S - 6168
+                                                </p>
+                                                <p class="main-product__name">
+                                                    Mailing –Coex bag
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="main-product__item">
+                                            <img
+                                                class="main-product__img"
+                                                src="./imgs/product.png"
+                                                alt=""
+                                            />
+                                            <div class="main-product__info">
+                                                <p class="main-product__code">
+                                                    VNK’S - 6168
+                                                </p>
+                                                <p class="main-product__name">
+                                                    Mailing –Coex bag
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-product__items-nav">
+                                <button class="swiper-button-prev">
+                                    <img src="./imgs/arrow-left.svg" alt="" />
+                                </button>
+                                <button class="swiper-button-next">
+                                    <img src="./imgs/arrow-right.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="main-product__more">
+                            <a href="#">Quality and factory</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="certifications__wrapper">
+                    <div class="certifications__bg"></div>
+                    <div class="certifications">
+                        <div class="certifications__title">
+                            <h2>Obtained numerous valuable certifications</h2>
+                        </div>
+                        <p class="certifications__content">
+                            We are proud to hold several valuable
+                            certifications, demonstrating our commitment to the
+                            highest production standards.
+                        </p>
+                        <div class="certifications__list">
+                            <div class="swiper certifications__list-swiper">
+                                <div class="swiper-wrapper">
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-1.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-2.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-3.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-4.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-1.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-2.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-3.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="swiper-slide certifications__item"
+                                    >
+                                        <img
+                                            src="./imgs/certifications-4.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="certifications__pagination">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../../../js/gsap.js"></script>
+        <script src="../../../js/gsap.min.js"></script>
+        <script src="../../../js/ScrollTrigger.min.js"></script>
+        <script>
+            const expanding = document.querySelector(".homepage__expanding");
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const btnPlay = document.querySelector(
+                                ".expanding__video-btn"
+                            );
+                            const video = document.querySelector(
+                                ".expanding__video-content"
+                            );
+                            btnPlay.style.visibility = "hidden";
+                            btnPlay.style.opacity = "0";
+                            video.play();
+                            // video.addEventListener("pause", (event) => {
+                            //     btnPlay.style.visibility = null;
+                            //     btnPlay.style.opacity = null;
+                            //     video.controls = !video.controls;
+                            // });
+                            // video.addEventListener("play", (event) => {
+                            //     btnPlay.style.visibility = "hidden";
+                            //     btnPlay.style.opacity = "0";
+                            //     video.controls = !video.controls;
+                            // });
+                            // btnPlay.addEventListener("click", () => {
+                            //     video.play();
+                            // });
+                        }
+                    });
+                },
+                {
+                    threshold: 0.5, // Trigger when 50% of the section is visible
+                }
+            );
+            observer.observe(expanding);
 
-    <script src="../../../js/gsap.js"></script>
-    <script src="../../../js/gsap.min.js"></script>
-    <script src="../../../js/ScrollTrigger.min.js"></script>
-  </body>
+            new Swiper(".main-product__items", {
+                slidesPerView: "auto",
+                // spaceBetween: 20,
+                navigation: {
+                    nextEl: ".main-product__items-nav .swiper-button-next",
+                    prevEl: ".main-product__items-nav .swiper-button-prev",
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    },
+                },
+            });
+            new Swiper(".main-product__nav", {
+                slidesPerView: "auto",
+            });
+
+            const swiperCertifications = new Swiper(
+                ".certifications__list-swiper",
+                {
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 2,
+                    slideToClickedSlide: true,
+                    // autoplay: {
+                    //     delay: 3000,
+                    // },
+                    spaceBetween: 30,
+                    loop: true,
+                    pagination: {
+                        el: ".certifications__pagination .swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 5,
+                            spaceBetween: 0,
+                        },
+                    },
+                }
+            );
+
+            let currentCardIndex = 0;
+            const cards = document.querySelectorAll(
+                ".certifications__pagination .swiper-pagination-bullet"
+            );
+            const totalCards = cards.length;
+
+            function updateCarousel() {
+                cards.forEach((card) => {
+                    card.classList.remove(
+                        "active",
+                        "prev-1",
+                        "next-1",
+                        "prev-2",
+                        "next-2",
+                        "prev-3",
+                        "next-3"
+                    );
+                });
+
+                cards[currentCardIndex].classList.add("active");
+
+                const prevIndex_1 =
+                    (currentCardIndex - 1 + totalCards) % totalCards;
+                const nextIndex_1 = (currentCardIndex + 1) % totalCards;
+                const prevIndex_2 =
+                    (currentCardIndex - 2 + totalCards) % totalCards;
+                const nextIndex_2 = (currentCardIndex + 2) % totalCards;
+                const prevIndex_3 =
+                    (currentCardIndex - 3 + totalCards) % totalCards;
+                const nextIndex_3 = (currentCardIndex + 3) % totalCards;
+
+                cards[prevIndex_1].classList.add("prev-1");
+                cards[nextIndex_1].classList.add("next-1");
+                cards[prevIndex_2].classList.add("prev-2");
+                cards[nextIndex_2].classList.add("next-2");
+                cards[prevIndex_3].classList.add("prev-3");
+                cards[nextIndex_3].classList.add("next-3");
+            }
+
+            updateCarousel();
+
+            // document
+            //     .querySelector(".right")
+            //     .addEventListener("click", function () {
+            //         currentCardIndex = (currentCardIndex + 1) % totalCards;
+            //         updateCarousel();
+            //     });
+
+            // document
+            //     .querySelector(".left")
+            //     .addEventListener("click", function () {
+            //         currentCardIndex =
+            //             (currentCardIndex - 1 + totalCards) % totalCards;
+            //         updateCarousel();
+            //     });
+
+            swiperCertifications.on("slideChange", function ({ realIndex }) {
+                currentCardIndex = (realIndex - 1 + totalCards) % totalCards;
+                updateCarousel();
+                console.log("slide changed");
+            });
+        </script>
+    </body>
 </html>

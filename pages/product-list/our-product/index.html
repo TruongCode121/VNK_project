@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="../../../assets/style/global.css" />
+        <link rel="stylesheet" href="../../../assets/style/reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css"
+            integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section class="product-page">
+            <div class="filter-only-mb">
+                <div class="filter-only-mb__btn">
+                    <img src="./images/filter-lines.svg" alt="" />Filters
+                </div>
+                <div class="filter-only-mb__text">
+                    <span class="results">0</span>result for real estate
+                </div>
+            </div>
+            <ul class="filter-only-mb--list product-page__filter-list">
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="food-packaging"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label
+                        for="food-packaging"
+                        class="product-page__filter-label"
+                        >Food packaging</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="shipping-bag"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label for="shipping-bag" class="product-page__filter-label"
+                        >Shipping bag</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="shopping-bag"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label for="shopping-bag" class="product-page__filter-label"
+                        >Shopping bag</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="trash-bags"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label for="trash-bags" class="product-page__filter-label"
+                        >Trash bags</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="injection-moulding"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label
+                        for="injection-moulding"
+                        class="product-page__filter-label"
+                        >Injection Moulding Products</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="uncategorized"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label
+                        for="uncategorized"
+                        class="product-page__filter-label"
+                        >Uncategorized</label
+                    >
+                </li>
+                <li class="product-page__filter-item">
+                    <input
+                        type="checkbox"
+                        id="future-products"
+                        name="filter[]"
+                        class="product-page__filter-input"
+                    />
+                    <div class="product-page__filter-checkbox"></div>
+                    <label
+                        for="future-products"
+                        class="product-page__filter-label"
+                        >Future Products</label
+                    >
+                </li>
+            </ul>
+            <div class="product-page__bg">
+                <img src="./images/Blob.svg" alt="" />
+            </div>
+            <div class="product-page__container">
+                <div class="product-page__heading">Our Product</div>
+                <aside class="product-page__sidebar">
+                    <h2 class="product-page__filter-title">
+                        <img src="./images/filter-lines.svg" alt="" />Filters
+                    </h2>
+
+                    <div class="product-page__filter-line">
+                        <div class="product-page__filter-line-content">
+                            What kind of product are you looking for?
+                            <img src="./images/Caret_Down_MD.svg" alt="" />
+                        </div>
+                    </div>
+                    <ul class="sidebar__filter-list product-page__filter-list">
+                        <li
+                            class="product-page__filter-item product-page__filter-item--label"
+                        >
+                            Select product type
+                            <a
+                                class="sidebar__filter-list-close product-page__filter-close"
+                                href="#"
+                                ><img src="./images/Close_MD.svg" alt=""
+                            /></a>
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="food-packaging"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="food-packaging"
+                                class="product-page__filter-label"
+                                >Food packaging</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="shipping-bag"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="shipping-bag"
+                                class="product-page__filter-label"
+                                >Shipping bag</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="shopping-bag"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="shopping-bag"
+                                class="product-page__filter-label"
+                                >Shopping bag</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="trash-bags"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="trash-bags"
+                                class="product-page__filter-label"
+                                >Trash bags</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="injection-moulding"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="injection-moulding"
+                                class="product-page__filter-label"
+                                >Injection Moulding Products</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="uncategorized"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="uncategorized"
+                                class="product-page__filter-label"
+                                >Uncategorized</label
+                            >
+                        </li>
+                        <li class="product-page__filter-item">
+                            <input
+                                type="checkbox"
+                                id="future-products"
+                                name="filter[]"
+                                class="product-page__filter-input"
+                            />
+                            <div class="product-page__filter-checkbox"></div>
+                            <label
+                                for="future-products"
+                                class="product-page__filter-label"
+                                >Future Products</label
+                            >
+                        </li>
+                    </ul>
+                    <div class="product-page__sidebar-details">
+                        <div class="product-page__sidebar-details-image">
+                            <img src="./images/image.png" alt="" />
+                            <a href="#"
+                                >Our expert consultants always bring you the
+                                most optimal solutions</a
+                            >
+                        </div>
+                        <div class="product-page__sidebar-details-item">
+                            <img src="./images/Túi n2 1.png" alt="" />
+                            <a href="#"
+                                >Our expert consultants always bring you the
+                                most optimal solutions</a
+                            >
+                        </div>
+                        <div class="product-page__sidebar-details-item">
+                            <img src="./images/Túi n2 1.png" alt="" />
+                            <a href="#"
+                                >Our expert consultants always bring you the
+                                most optimal solutions</a
+                            >
+                        </div>
+                        <div class="product-page__sidebar-details-item">
+                            <img src="./images/Túi n2 1.png" alt="" />
+                            <a href="#"
+                                >Our expert consultants always bring you the
+                                most optimal solutions</a
+                            >
+                        </div>
+                        <div class="product-page__sidebar-details-number">
+                            <div class="column column--1">
+                                <h5><span>18</span>Year</h5>
+                                <p>Years of upholding trust</p>
+                            </div>
+                            <div class="column column--2">
+                                <h5><span>10.000</span>Ton</h5>
+                                <p>The annual production capacity of VNK's</p>
+                            </div>
+                        </div>
+                        <a href="#" class="product-page__contact-link"
+                            >Contact Us →</a
+                        >
+                    </div>
+                </aside>
+                <div class="product-page__content">
+                    <div class="product-page__content-heading">
+                        Product list
+                    </div>
+                    <nav class="product-page__navigation">
+                        <a class="product-page__navigation-link active" href="#"
+                            >Food packaging</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Shipping bag</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Shopping bag</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Trash Bags</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Injection Moulding Products</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Uncategorized</a
+                        >
+                        <a class="product-page__navigation-link" href="#"
+                            >Future Products</a
+                        >
+                    </nav>
+                    <div class="product-page__grid">
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 1"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 1"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 1"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 1"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 2"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 3"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 4"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 5"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                        <div class="product-page__item">
+                            <img
+                                src="./images/Túi vải.png"
+                                alt="Product 6"
+                                class="product-page__image"
+                            />
+                            <p class="product-page__description">
+                                Plastic Bags with Rigid Handle
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-page__pagination">
+                        <ul class="product-page__pagination-list">
+                            <li class="product-page__pagination-item">
+                                <a
+                                    href="#"
+                                    class="product-page__pagination-link active"
+                                    >1</a
+                                >
+                            </li>
+                            <li class="product-page__pagination-item">
+                                <a
+                                    href="#"
+                                    class="product-page__pagination-link"
+                                    >2</a
+                                >
+                            </li>
+                            <li class="product-page__pagination-item">
+                                <a
+                                    href="#"
+                                    class="product-page__pagination-link"
+                                    >3</a
+                                >
+                            </li>
+                            <li class="product-page__pagination-item">
+                                <a
+                                    href="#"
+                                    class="product-page__pagination-link"
+                                    >...</a
+                                >
+                            </li>
+                            <li class="product-page__pagination-item">
+                                <a
+                                    href="#"
+                                    class="product-page__pagination-link"
+                                    >10</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        const filterLineOpen = document.querySelector(
+            ".product-page__filter-line-content"
+        );
+        const filterLineClose = document.querySelector(
+            ".sidebar__filter-list-close"
+        );
+        const filterLineBox = document.querySelector(".sidebar__filter-list");
+        filterLineOpen.addEventListener("click", (e) => {
+            e.preventDefault();
+            filterLineBox.classList.add("active");
+        });
+        filterLineClose.addEventListener("click", (e) => {
+            e.preventDefault();
+            filterLineBox.classList.remove("active");
+        });
+
+        const navigation = document.querySelector(".product-page__navigation");
+        const filterOnlyMb = document.querySelector(".filter-only-mb");
+        const filterOnlyMbList = document.querySelector(
+            ".filter-only-mb--list"
+        );
+        const filterOnlyMbListClose = document.querySelector(
+            ".filter-only-mb--list-close"
+        );
+
+        // Toggle the filter on scroll
+        window.addEventListener("scroll", function () {
+            const rect = navigation.getBoundingClientRect();
+            if (rect.top <= 0) {
+                filterOnlyMb.classList.add("active");
+            } else {
+                filterOnlyMb.classList.remove("active");
+            }
+        });
+
+        // Open the filter list when clicking the filter button
+        filterOnlyMb.addEventListener("click", (e) => {
+            e.preventDefault();
+            filterOnlyMbList.classList.toggle("active");
+        });
+
+        // Close the filter list when clicking outside of it
+        document.addEventListener("click", (e) => {
+            if (
+                filterOnlyMbList.classList.contains("active") && // Check if the list is open
+                !filterOnlyMbList.contains(e.target) && // Check if the click is outside the list
+                !filterOnlyMb.contains(e.target) // Exclude clicking on the filter button itself
+            ) {
+                filterOnlyMbList.classList.remove("active"); // Close the list
+            }
+        });
+    </script>
+</html>

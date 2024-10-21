@@ -1,0 +1,508 @@
+@import url("../../../assets/style/global.css");
+@import url("../../../assets/style/reset.css");
+.footer {
+  background: #18a457;
+  border-top: 1px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+.footer__bg {
+  position: absolute;
+  width: 69.01394rem;
+  height: 58.4775rem;
+  right: -7.68rem;
+  bottom: -7.98rem;
+}
+.footer__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__top {
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footer__top-inner {
+  max-width: 85rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__top-list {
+  display: flex;
+  align-items: center;
+  max-width: 51.0625rem;
+}
+.footer__top-item {
+  margin-left: 3.3rem;
+}
+.footer__top-item:first-child {
+  margin-left: 0;
+}
+.footer__top-link {
+  display: flex;
+  align-items: center;
+}
+.footer__top-link img {
+  margin-left: 0.44rem;
+  width: 0.6875rem;
+  height: auto;
+}
+.footer__top-list-social {
+  flex: 1;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.footer__top-social-item {
+  margin-left: 0.86rem;
+}
+.footer__top-social-item:first-child {
+  margin-left: 0;
+}
+.footer__top-social-link {
+  width: 3.49138rem;
+  height: 3.49138rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__top-social-link img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__top-link {
+  color: var(--text-body-inverse-white-inverse, #fff);
+  /* PC/18-B */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.01125rem;
+}
+.footer__center {
+  position: relative;
+  background: #fff;
+  padding-top: 4.37rem;
+  padding-bottom: 5.04rem;
+}
+.footer__center-inner {
+  max-width: 85rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: auto;
+}
+.footer__logo {
+  max-width: 23.1875rem;
+}
+.footer__logo-image {
+  width: 16.25rem;
+  height: 4.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__logo-text {
+  margin-top: 2.25rem;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+}
+.footer__logo-license {
+  margin-top: 0.88rem;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+}
+.footer__contact, .footer__support, .footer__advice {
+  flex: 1;
+  margin-top: 2.25rem;
+  margin-left: 3rem;
+}
+.footer__contact-title, .footer__support-title, .footer__advice-title {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18-B */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.01125rem;
+  margin-bottom: 1.69rem;
+}
+.footer__contact-location, .footer__contact-phone, .footer__contact-email, .footer__support-location, .footer__support-phone, .footer__support-email, .footer__advice-location, .footer__advice-phone, .footer__advice-email {
+  display: flex;
+  align-items: start;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+  margin-top: 2.25rem;
+}
+.footer__contact-location:first-child, .footer__contact-phone:first-child, .footer__contact-email:first-child, .footer__support-location:first-child, .footer__support-phone:first-child, .footer__support-email:first-child, .footer__advice-location:first-child, .footer__advice-phone:first-child, .footer__advice-email:first-child {
+  margin-top: 0;
+}
+.footer__contact-location img, .footer__contact-phone img, .footer__contact-email img, .footer__support-location img, .footer__support-phone img, .footer__support-email img, .footer__advice-location img, .footer__advice-phone img, .footer__advice-email img {
+  margin-right: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__support-list {
+  list-style: none;
+  padding: 0;
+}
+.footer__support-item {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+  margin-top: 2.25rem;
+}
+.footer__support-item:first-child {
+  margin-top: 0;
+}
+.footer__advice-text {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+  max-width: 14.5rem;
+}
+.footer__advice-form {
+  display: flex;
+  margin-top: 3.31rem;
+}
+.footer__advice-form input {
+  padding-bottom: 0.94rem;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.4901960784);
+  max-width: 14.75rem;
+  align-self: start;
+}
+.footer__advice-form input::-moz-placeholder {
+  color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+  /* PC/18-B */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.01125rem;
+  opacity: 0.8;
+}
+.footer__advice-form input::placeholder {
+  color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+  /* PC/18-B */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.01125rem;
+  opacity: 0.8;
+}
+.footer__advice-form input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.4901960784);
+}
+.footer__advice-form button {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-top: 0.82rem;
+}
+.footer__bottom {
+  position: relative;
+  background: #fff;
+}
+.footer__bottom-inner {
+  border-top: 1px solid #e0e0e0;
+  max-width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+.footer__bottom-text {
+  color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+  /* PC/Body/Body-16 */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+}
+.footer__bottom-designed {
+  color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+  /* PC/Body/Body-16 */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+}
+
+@media (max-width: 639.98px) {
+  .footer {
+    background: transparent;
+  }
+  .footer__bg {
+    width: 31.3125rem;
+    height: 26.5rem;
+    right: 0;
+    bottom: 1.94rem;
+  }
+  .footer__bg img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .footer__top {
+    background: #18a457;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+  }
+  .footer__top-inner {
+    max-width: 100%;
+  }
+  .footer__top-list {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+  .footer__top-item {
+    margin-left: 0;
+  }
+  .footer__top-link {
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/SUB - M/12 - Se - M */
+    font-family: "Averta Std CY";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 0.9rem */
+    letter-spacing: -0.0075rem;
+    text-transform: uppercase;
+  }
+  .footer__top-list-social {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    overflow: auto;
+    margin: 0;
+  }
+  .footer__top-list-social::-webkit-scrollbar {
+    display: none;
+  }
+  .footer__top-social-link img {
+    width: 1.11881rem;
+    height: 1.11881rem;
+  }
+  .footer__center {
+    background: transparent;
+    padding: 1rem;
+    padding-top: 3.12rem;
+  }
+  .footer__center-inner {
+    flex-direction: column;
+  }
+  .footer__logo {
+    border-bottom: 1px solid rgba(216, 216, 216, 0.76);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer__logo-image {
+    width: 11.0625rem;
+    height: 3.125rem;
+  }
+  .footer__logo-text {
+    margin-top: 1.5rem;
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/BODY1/14 - R - Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+  }
+  .footer__logo-license {
+    margin-top: 0.75rem;
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/BODY1/14 - R - Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+  }
+  .footer__contact, .footer__support, .footer__advice {
+    margin: 0;
+  }
+  .footer__contact-title, .footer__support-title, .footer__advice-title {
+    color: var(--Text-Scale-90, #1d1d1d);
+    /* APP/H5/16-B-Upper */
+    font-family: "Averta Std CY";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: -0.02rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .footer__advice {
+    border-top: 1px solid rgba(216, 216, 216, 0.76);
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    width: 100%;
+  }
+  .footer__support-list {
+    border-top: 1px solid rgba(216, 216, 216, 0.76);
+    padding-top: 1.25rem;
+  }
+  .footer__support-item {
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/SUB - M/12 - Se - M */
+    font-family: "Averta Std CY";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 0.9rem */
+    letter-spacing: -0.0075rem;
+    text-transform: uppercase;
+  }
+  .footer__advice-text {
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/BODY1/14 - R - Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    max-width: 100%;
+  }
+  .footer__advice-form {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.76);
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+  .footer__advice-form input {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: var(--Text-Body-Body-40---sub, #6e6e6e);
+    /* APP/Input/14 - R -Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    letter-spacing: -0.00875rem;
+  }
+  .footer__advice-form input::-moz-placeholder {
+    color: var(--Text-Body-Body-40---sub, #6e6e6e);
+    /* APP/Input/14 - R -Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    letter-spacing: -0.00875rem;
+  }
+  .footer__advice-form input::placeholder {
+    color: var(--Text-Body-Body-40---sub, #6e6e6e);
+    /* APP/Input/14 - R -Mb */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    letter-spacing: -0.00875rem;
+  }
+  .footer__advice-form button {
+    margin-top: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .footer__advice-form button img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    rotate: -45deg;
+  }
+  .footer .footer__contact-location,
+  .footer .footer__contact-phone {
+    display: flex;
+    align-items: center;
+  }
+  .footer .footer__contact-location .label,
+  .footer .footer__contact-phone .label {
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/SUB2/MEDIUM */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 1.225rem */
+    letter-spacing: -0.00875rem;
+    margin-right: 1.62rem;
+  }
+  .footer .footer__contact-location .content,
+  .footer .footer__contact-phone .content {
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+    /* APP/SUB - M/12 - R - M */
+    font-family: "Averta Std CY";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.125rem */
+  }
+  .footer .footer__contact-location .content > *,
+  .footer .footer__contact-phone .content > * {
+    margin-top: 0.62rem;
+  }
+  .footer .footer__contact-location .content > :first-child,
+  .footer .footer__contact-phone .content > :first-child {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

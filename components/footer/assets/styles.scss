@@ -1,0 +1,570 @@
+@import url("../../../assets/style/global.css");
+@import url("../../../assets/style/reset.css");
+
+.footer {
+  background: #18a457;
+  border-top: 1px solid #fff;
+  position: relative;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    width: 69.01394rem;
+    height: 58.4775rem;
+    right: -7.68rem;
+    bottom: -7.98rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__top {
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &-inner {
+      max-width: 85rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      max-width: 51.0625rem;
+    }
+
+    &-item {
+      margin-left: 3.3rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: 0.44rem;
+        width: 0.6875rem;
+        height: auto;
+      }
+    }
+
+    &-list-social {
+      flex: 1;
+      max-width: fit-content;
+    }
+    &-social-item {
+      margin-left: 0.86rem;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &-social-link {
+      width: 3.49138rem;
+      height: 3.49138rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    &-link {
+      color: var(--text-body-inverse-white-inverse, #fff);
+
+      /* PC/18-B */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 1.35rem */
+      letter-spacing: -0.01125rem;
+    }
+  }
+  &__center {
+    position: relative;
+    background: #fff;
+    padding-top: 4.37rem;
+    padding-bottom: 5.04rem;
+    &-inner {
+      max-width: 85rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin: auto;
+    }
+  }
+  &__logo {
+    max-width: 23.1875rem;
+    &-image {
+      width: 16.25rem;
+      height: 4.5rem;
+      object-fit: contain;
+    }
+
+    &-text {
+      margin-top: 2.25rem;
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18 - semi */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+    }
+
+    &-license {
+      margin-top: 0.88rem;
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18 - semi */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+    }
+  }
+
+  &__contact,
+  &__support,
+  &__advice {
+    flex: 1;
+    margin-top: 2.25rem;
+    margin-left: 3rem;
+    &-title {
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18-B */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 1.35rem */
+      letter-spacing: -0.01125rem;
+      margin-bottom: 1.69rem;
+    }
+
+    &-location,
+    &-phone,
+    &-email {
+      display: flex;
+      align-items: start;
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18 - semi */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+      margin-top: 2.25rem;
+      &:first-child {
+        margin-top: 0;
+      }
+      img {
+        margin-right: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__support {
+    &-list {
+      list-style: none;
+      padding: 0;
+    }
+    &-item {
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18 - semi */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+      margin-top: 2.25rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__advice {
+    &-text {
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* PC/18 - semi */
+      font-family: "Averta Std CY";
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.575rem */
+      letter-spacing: -0.01125rem;
+      max-width: 14.5rem;
+    }
+
+    &-form {
+      display: flex;
+      margin-top: 3.31rem;
+      input {
+        padding-bottom: 0.94rem;
+        border-bottom: 1px solid #1d1d1d7d;
+        max-width: 14.75rem;
+        align-self: start;
+        &::placeholder {
+          color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+
+          /* PC/18-B */
+          font-family: "Averta Std CY";
+          font-size: 1.125rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 1.35rem */
+          letter-spacing: -0.01125rem;
+          opacity: 0.8;
+        }
+        &:focus {
+          border: none;
+          outline: none;
+          border-bottom: 1px solid #1d1d1d7d;
+        }
+      }
+
+      button {
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-top: 0.82rem;
+      }
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    background: #fff;
+    &-inner {
+      border-top: 1px solid #e0e0e0;
+      max-width: 90rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 0.75rem;
+    }
+    &-text {
+      color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+
+      /* PC/Body/Body-16 */
+      font-family: "Averta Std CY";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 1.5rem */
+      letter-spacing: -0.01rem;
+    }
+
+    &-designed {
+      color: var(--Text-Body-text-grey-green-sub, rgba(94, 107, 101, 0.76));
+
+      /* PC/Body/Body-16 */
+      font-family: "Averta Std CY";
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 1.5rem */
+      letter-spacing: -0.01rem;
+    }
+  }
+}
+
+@media (max-width: 639.98px) {
+  .footer {
+    background: transparent;
+    &__bg {
+      width: 31.3125rem;
+      height: 26.5rem;
+      right: 0;
+      bottom: 1.94rem;
+      img {
+        object-fit: cover;
+      }
+    }
+    &__top {
+      background: #18a457;
+      height: fit-content;
+      padding: 0.5rem;
+      &-inner {
+        max-width: 100%;
+      }
+      &-list {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1.5rem;
+        // display: none;
+      }
+
+      &-item {
+        margin-left: 0;
+        &:first-child {
+        }
+      }
+
+      &-link {
+        color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+        /* APP/SUB - M/12 - Se - M */
+        font-family: "Averta Std CY";
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 0.9rem */
+        letter-spacing: -0.0075rem;
+        text-transform: uppercase;
+        img {
+        }
+      }
+
+      &-list-social {
+        display: flex;
+        width: fit-content;
+        overflow: auto;
+        margin: 0;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      &-social-item {
+        &:first-child {
+        }
+      }
+      &-social-link {
+        img {
+          width: 1.11881rem;
+          height: 1.11881rem;
+        }
+      }
+      &-link {
+      }
+    }
+    &__center {
+      background: transparent;
+      padding: 1rem;
+      padding-top: 3.12rem;
+      &-inner {
+        flex-direction: column;
+      }
+    }
+    &__logo {
+      border-bottom: 1px solid rgba(216, 216, 216, 0.76);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      &-image {
+        width: 11.0625rem;
+        height: 3.125rem;
+      }
+
+      &-text {
+        margin-top: 1.5rem;
+        color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+        /* APP/BODY1/14 - R - Mb */
+        font-family: "Averta Std CY";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 1.3125rem */
+      }
+
+      &-license {
+        margin-top: 0.75rem;
+        color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+        /* APP/BODY1/14 - R - Mb */
+        font-family: "Averta Std CY";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 1.3125rem */
+      }
+    }
+
+    &__contact,
+    &__support,
+    &__advice {
+      margin: 0;
+      &-title {
+        color: var(--Text-Scale-90, #1d1d1d);
+
+        /* APP/H5/16-B-Upper */
+        font-family: "Averta Std CY";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 1.5rem */
+        letter-spacing: -0.02rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      &-location,
+      &-phone,
+      &-email {
+        &:first-child {
+        }
+        img {
+        }
+      }
+    }
+    &__advice {
+      border-top: 1px solid rgba(216, 216, 216, 0.76);
+      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      // margin-bottom: 1.25rem;
+      width: 100%;
+    }
+    &__support {
+      &-list {
+        border-top: 1px solid rgba(216, 216, 216, 0.76);
+        padding-top: 1.25rem;
+      }
+      &-item {
+        color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+        /* APP/SUB - M/12 - Se - M */
+        font-family: "Averta Std CY";
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 0.9rem */
+        letter-spacing: -0.0075rem;
+        text-transform: uppercase;
+        &:first-child {
+        }
+      }
+    }
+
+    &__advice {
+      &-text {
+        color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+        /* APP/BODY1/14 - R - Mb */
+        font-family: "Averta Std CY";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 1.3125rem */
+        max-width: 100%;
+      }
+
+      &-form {
+        margin-top: 1.5rem;
+        border-bottom: 1px solid rgba(216, 216, 216, 0.76);
+        padding-bottom: 0.5rem;
+        position: relative;
+        input {
+          background: transparent;
+          padding: 0;
+          border: none;
+          color: var(--Text-Body-Body-40---sub, #6e6e6e);
+
+          /* APP/Input/14 - R -Mb */
+          font-family: "Averta Std CY";
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 1.3125rem */
+          letter-spacing: -0.00875rem;
+          &::placeholder {
+            color: var(--Text-Body-Body-40---sub, #6e6e6e);
+
+            /* APP/Input/14 - R -Mb */
+            font-family: "Averta Std CY";
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 1.3125rem */
+            letter-spacing: -0.00875rem;
+          }
+          &:focus {
+          }
+        }
+
+        button {
+          margin-top: 0;
+          width: 1.875rem;
+          height: 1.875rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+          img {
+            object-fit: contain;
+            rotate: -45deg;
+          }
+        }
+      }
+    }
+    .footer__contact-location,
+    .footer__contact-phone {
+      display: flex;
+      align-items: center;
+    }
+    .footer__contact-location .label,
+    .footer__contact-phone .label {
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* APP/SUB2/MEDIUM */
+      font-family: "Averta Std CY";
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 1.225rem */
+      letter-spacing: -0.00875rem;
+      margin-right: 1.62rem;
+    }
+    .footer__contact-location .content,
+    .footer__contact-phone .content {
+      color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+      /* APP/SUB - M/12 - R - M */
+      font-family: "Averta Std CY";
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 1.125rem */
+      > * {
+        margin-top: 0.62rem;
+      }
+      > :first-child {
+        margin-top: 0;
+      }
+    }
+    &__bottom {
+      &-inner {
+      }
+      &-text {
+      }
+
+      &-designed {
+      }
+    }
+  }
+}

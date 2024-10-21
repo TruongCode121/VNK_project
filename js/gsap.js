@@ -1,10 +1,10 @@
 function init() {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger);
 
-  ScrollSmoother.create({
-    smooth: 1,
-    effects: true,
-  });
+    // ScrollSmoother.create({
+    //   smooth: 1,
+    //   effects: true,
+    // });
 }
 
 window.addEventListener("DOMContentLoaded", init);

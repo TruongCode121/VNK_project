@@ -1,0 +1,47 @@
+.experience {
+  position: relative;
+  &__wrapper {
+    position: relative;
+    padding-top: 28.06rem;
+    overflow: hidden;
+  }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    top: 18.38rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__map {
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    svg {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      path:hover {
+        fill: #a88f10;
+        stroke-width: 0.16px;
+        stroke: var(--Real-green-600, #16954f);
+        filter: drop-shadow(-2px 5px 0px rgba(0, 76, 9, 0.77));
+      }
+    }
+    .nation {
+      &:hover {
+        fill: #10a854;
+        stroke-width: 0.16px;
+        stroke: var(--Real-green-600, #16954f);
+        filter: drop-shadow(-2px 5px 0px rgba(0, 76, 9, 0.77));
+      }
+    }
+  }
+  &__form {
+  }
+}
