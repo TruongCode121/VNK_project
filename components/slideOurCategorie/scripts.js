@@ -19,6 +19,10 @@ function init() {
       // Khi độ rộng màn hình >= 768px
       769: {
         slidesPerView: 6,
+        spaceBetween: 40,
+      },
+      1200: {
+        slidesPerView: 6,
         spaceBetween: 70,
       },
     },
