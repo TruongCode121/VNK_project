@@ -74,7 +74,7 @@
   .wrap_img_content
   .product_img {
   width: 11.75rem;
-  height: 8.375rem;
+  height: 8.875rem;
   flex-shrink: 0;
   transition: all 0.4s ease-out;
 }
@@ -105,14 +105,31 @@
   transform: translateY(-1rem) scale(1.1);
 }
 .section_our_categorie .slide_product .swiper-wrapper .swiper-slide .trapezoid {
-  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.section_our_categorie
+  .slide_product
+  .swiper-wrapper
+  .swiper-slide
+  .trapezoid
+  .bg_color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1c934b;
+  opacity: 0;
+  transition: all 0.4s ease-out;
 }
 .section_our_categorie
   .slide_product
   .swiper-wrapper
   .swiper-slide:hover
-  .trapezoid {
-  background-color: #1c934b;
+  .trapezoid
+  .bg_color {
+  opacity: 1;
 }
 .section_our_categorie .slide_product .swiper-slide:nth-child(odd) .trapezoid {
   height: 5rem;
@@ -122,14 +139,16 @@
   margin: 3rem auto 1rem;
   border-radius: 0.5rem;
   transition: all 0.4s ease-out;
+  background: linear-gradient(to bottom, #a5e7ae, #42cf81);
 }
 .section_our_categorie .slide_product .swiper-slide:nth-child(even) .trapezoid {
   height: 5rem;
   flex-shrink: 0;
   transform: perspective(0.3rem) rotateX(-181deg);
-  margin: 4rem auto 2.5rem;
+  margin: 3.7rem auto 2.5rem;
   border-radius: 0.5rem;
   transition: all 0.4s ease-out;
+  background: linear-gradient(to top, #a5e7ae, #42cf81);
 }
 .section_our_categorie
   .slide_product
@@ -196,16 +215,24 @@
   }
   .section_our_categorie
     .slide_product
+    .swiper-wrapper
+    .swiper-slide
+    .trapezoid
+    .bg_color {
+    opacity: 1;
+  }
+  .section_our_categorie
+    .slide_product
     .swiper-slide:nth-child(odd)
     .trapezoid {
-    transform: perspective(0.3rem) rotateX(1deg) scaleY(0.9) scaleX(1.2);
+    transform: perspective(0.3rem) rotateX(1deg) scaleY(0.9) scaleX(1.1);
     background-color: #1c934b;
   }
   .section_our_categorie
     .slide_product
     .swiper-slide:nth-child(even)
     .trapezoid {
-    transform: perspective(0.3rem) rotateX(-181deg) scaleY(0.9) scaleX(1.2);
+    transform: perspective(0.3rem) rotateX(-181deg) scaleY(0.9) scaleX(1.1);
     background-color: #1c934b;
   }
   .section_our_categorie
