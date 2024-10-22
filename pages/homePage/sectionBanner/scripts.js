@@ -55,7 +55,7 @@ gsap.to(overLay_bg_header, {
 let menu_component = document.querySelectorAll(".section_menu");
 
 let overLay_menu = document.getElementById("overLay_menu");
-let toggleMenu = false;
+
 function addClassSectionMenu(className) {
   menu_component.forEach((item) => {
     item.classList.add(className);
