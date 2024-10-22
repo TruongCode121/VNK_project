@@ -1,0 +1,126 @@
+#contactPage {
+  position: relative;
+}
+#contactPage .bgbanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 38.5rem;
+  flex-shrink: 0;
+}
+#contactPage .contentContact {
+  position: absolute;
+  top: 7.19rem;
+  left: 1rem;
+  right: 1rem;
+}
+#contactPage .contentContact .titleHeading {
+  color: var(--Text-Title-White-inverse, #fff);
+
+  /* APP/H1/30 - B - Mb */
+  font-family: "Averta Std CY";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 2.7rem */
+  letter-spacing: -0.1125rem;
+}
+#contactPage .contentContact .desc {
+  margin-top: 1rem;
+  color: var(--Text-Title-White-inverse, #fff);
+  font-family: "Averta Std CY";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.3125rem */
+  letter-spacing: 0.00219rem;
+}
+#contactPage .inforContact {
+  top: 51.5rem;
+  position: relative;
+  padding: 0 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+#contactPage .inforContact h3 {
+  color: var(--Text-Scale-80, #262626);
+
+  /* APP/H4/18 - B - Mb */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.0225rem;
+}
+#contactPage .inforContact .infors {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+}
+#contactPage .inforContact .infors .infor_item {
+  display: flex;
+  align-items: flex-start;
+}
+#contactPage .inforContact .infors .infor_item img {
+  margin-right: 0.75rem;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.06725rem 0.15625rem 0.06725rem 0.15631rem;
+  justify-content: center;
+  align-items: center;
+}
+#contactPage .inforContact .infors .infor_item p {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+  /* APP/BODY1/16 - R */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+}
+#contactPage .inforContact .socials {
+  margin-top: 1.25rem;
+  display: flex;
+}
+#contactPage .inforContact .socials .socialIttem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  margin-right: 0.75rem;
+}
+#contactPage .inforContact .map {
+  margin-top: 2rem;
+  height: 13.75rem;
+  overflow: hidden;
+  border-radius: var(--16, 1rem);
+  background: linear-gradient(95deg, #11743e -37.19%, #18a457 131.31%);
+}
+#contactPage .inforContact .map .ifMapMb {
+  height: 10.25rem;
+}
+#contactPage .inforContact .map .btnView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  color: var(--text-body-inverse-white-inverse, #fff);
+  leading-trim: both;
+  text-edge: cap;
+
+  /* APP/BUTTON/14 - Se */
+  font-family: "Averta Std CY";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 1.1375rem */
+  letter-spacing: -0.0175rem;
+}
+#contactPage .inforContact .map .btnView img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
