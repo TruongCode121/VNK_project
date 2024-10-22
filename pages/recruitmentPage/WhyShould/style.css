@@ -1,0 +1,125 @@
+#sectionWhyShould {
+  position: relative;
+}
+#sectionWhyShould .whyshould {
+  left: 7.5rem;
+  top: 16rem;
+  position: absolute;
+  display: flex;
+  width: 34.375rem;
+  height: 31.25rem;
+  padding: var(--Value-40, 2.5rem);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--Value-32, 2rem);
+  background: #fff;
+  box-shadow: -1px 2px 100px 3px rgba(103, 103, 103, 0.11);
+}
+#sectionWhyShould .whyshould .title {
+  /* PC/H3/48-B */
+  font-family: "Averta Std CY";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 3.6rem */
+  letter-spacing: -0.12rem;
+  background: var(--Color-1, linear-gradient(180deg, #15a256 0%, #2c7234 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#sectionWhyShould .whyshould .desc {
+  margin-top: 1.5rem;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+  /* PC/Body/Body - 18 -R */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+}
+#sectionWhyShould .whyshould .btnContact {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 3.125rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+
+  /* PC/Button/20-semi */
+  font-family: "Averta Std CY";
+  padding: 1rem var(--36, 2.25rem);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.75rem */
+  letter-spacing: -0.0125rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+#sectionWhyShould .whyshould .btnContact img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
+#sectionWhyShould .bg_whyshould {
+  position: absolute;
+  width: 58.1875rem;
+  height: 51.8125rem;
+  flex-shrink: 0;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 769px) {
+  #sectionWhyShould .whyshould {
+    /* margin: 1rem; */
+    width: 21.4375rem;
+    padding: 1.5rem 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+  }
+  #sectionWhyShould .whyshould .title {
+    /* APP/H3/24 - B - M */
+    font-family: "Averta Std CY";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 1.8rem */
+    letter-spacing: -0.03rem;
+  }
+  #sectionWhyShould .whyshould .desc {
+    margin-top: 1rem;
+    color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+    /* APP/BODY1/16 - R */
+    font-family: "Averta Std CY";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: -0.01rem;
+  }
+  #sectionWhyShould .whyshould .btnContact {
+    color: var(--text-body-inverse-white-inverse, #fff);
+
+    /* APP/BUTTON/16 - Se */
+    font-family: "Averta Std CY";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: -0.01rem;
+  }
+  #sectionWhyShould .bg_whyshould {
+    width: 23.4375rem;
+    height: 23.4375rem;
+    flex-shrink: 0;
+    top: 32.19rem;
+    left: 0;
+  }
+}
