@@ -1,0 +1,147 @@
+.global_expansition {
+  height: 58.9375rem;
+  padding-top: 5.92rem;
+  background: linear-gradient(
+    0deg,
+    rgba(107, 239, 61, 0.2) 0%,
+    rgba(107, 239, 61, 0) 100%
+  );
+}
+.global_expansition .innerSection {
+  width: 85rem;
+  margin: 0 8.79rem;
+}
+.global_expansition .innerSection .contentExpansion {
+  display: grid;
+  grid-template-columns: 39.09938rem auto;
+  justify-content: space-between;
+  align-items: end;
+}
+.global_expansition .innerSection .contentExpansion h3 {
+  /* PC/H5/36 -B */
+  font-family: "Averta Std CY";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 2.925rem */
+  letter-spacing: -0.0675rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.global_expansition .innerSection .contentExpansion .group_item {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2.5rem;
+}
+.global_expansition
+  .innerSection
+  .contentExpansion
+  .group_item
+  .item_expanstion {
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+
+  /* PC/16-B */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: -0.01rem;
+}
+.global_expansition .innerSection .swiper-container.slide_expansiton {
+  width: 100%;
+  height: 38.8125rem !important;
+  overflow: hidden;
+  margin-top: 3.52rem;
+  border-radius: 1.75813rem;
+}
+.innerSection .swiper-container.slide_expansiton .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75813rem;
+}
+.innerSection .swiper-container.slide_expansiton .swiper-slide img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+.innerSection .swiper-container.slide_expansiton .swiper-slide div {
+  position: absolute;
+  top: 28.38rem;
+  left: 1.58rem;
+}
+.innerSection .swiper-container.slide_expansiton .swiper-slide div > h5 {
+  color: var(
+    --text-body-inverse-white-70-sub-inverse,
+    rgba(255, 255, 255, 0.7)
+  );
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: -0.01rem;
+  text-transform: uppercase;
+}
+.innerSection .swiper-container.slide_expansiton .swiper-slide div > p {
+  color: var(--text-body-inverse-white-inverse, #fff);
+  font-family: "Averta Std CY";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.5rem */
+  letter-spacing: -0.0125rem;
+  width: 24.14875rem;
+  margin-top: 0.85rem;
+}
+@media (max-width: 769px) {
+  .global_expansition {
+    height: 35.75rem;
+    background: linear-gradient(
+      0deg,
+      rgba(107, 239, 61, 0.2) 0%,
+      rgba(107, 239, 61, 0) 100%
+    );
+    padding-top: 0;
+  }
+  .global_expansition
+    .contentExpansion
+    .group_item
+    .item_expanstion:last-of-type {
+    display: none;
+  }
+  .global_expansition .innerSection {
+    width: 21.4375rem;
+    margin: 0 auto;
+  }
+  .global_expansition .innerSection .contentExpansion {
+    grid-template-columns: 1fr;
+  }
+  .global_expansition .innerSection .contentExpansion .group_item {
+    display: none;
+  }
+  .global_expansition .innerSection .contentExpansion h3 {
+    /* APP/H3/24 - B - M */
+    font-family: "Averta Std CY";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 1.8rem */
+    letter-spacing: -0.03rem;
+  }
+  .innerSection .swiper-container.slide_expansiton {
+    margin-top: 1.75rem;
+    height: 26.0625rem !important;
+    border-radius: 0.75rem !important;
+  }
+  .innerSection .swiper-container.slide_expansiton .swiper-slide {
+    width: 18.375rem !important;
+    border-radius: 0.75rem !important;
+  }
+}
