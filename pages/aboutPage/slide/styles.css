@@ -1,0 +1,296 @@
+.aboutUs_slider {
+  position: relative;
+  height: 49.25rem;
+  overflow: hidden;
+}
+.bg_slide {
+  position: absolute;
+  height: 45.25rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  left: 11rem;
+  top: 3.36rem;
+  user-select: none;
+}
+.aboutUs_slider .slideWrapper {
+  margin-left: 4.44rem;
+  margin-right: 7.5rem;
+  display: grid;
+  grid-template-columns: auto 60.4425rem;
+  justify-content: space-between;
+}
+.aboutUs_slider .slideWrapper .slide1 {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16.12rem;
+}
+.aboutUs_slider .slideWiper1 .slider_button {
+  width: 3.125rem;
+  height: 3.125rem;
+  flex-shrink: 0;
+  position: absolute;
+  left: 5.6rem;
+}
+.aboutUs_slider .slideWiper1 .slider_button_prev {
+  rotate: 180deg;
+  margin-bottom: 1.81rem;
+  top: 11.13rem;
+}
+.aboutUs_slider .slideWiper1 .slider_button_next {
+  top: 37.15rem;
+}
+.aboutUs_slider .slideWrapper .slide1 .slider_button > img {
+  width: 100%;
+  height: 100%;
+}
+.aboutUs_slider .slideWrapper .slide1 .slideYear {
+  display: flex;
+}
+.aboutUs_slider .slideWrapper .slide1 .slideYear .listYear {
+  margin-right: 1.31rem;
+}
+
+.aboutUs_slider .slideWrapper .groupSlide {
+  display: flex;
+}
+.overlay1 {
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 41.625rem;
+  height: 16.125rem;
+  flex-shrink: 0;
+  background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #fff 54.28%);
+  position: absolute;
+}
+.overlay2 {
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  position: absolute;
+  width: 41.625rem;
+  height: 14.25rem;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 45.84%);
+}
+.slideYear .slideWiper1 {
+  height: 20.06rem;
+  overflow: hidden;
+}
+.slideYear .slideWiper1 .swiper-slide {
+  height: fit-content;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Averta Std CY";
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  color: #c3c3c3;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Averta Std CY";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 2.25rem */
+  padding: 0.1875rem 0.75rem 0.125rem 0.1875rem;
+  opacity: 0.1;
+}
+.slideYear .slideWiper1 .swiper-slide.swiper-slide-active {
+  color: #16954f;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Averta Std CY";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 2.7rem */
+  width: 4.8125rem;
+  opacity: 1;
+}
+.slideYear .slideWiper1 .swiper-slide.swiper-slide-next,
+.slideYear .slideWiper1 .swiper-slide.swiper-slide-prev {
+  opacity: 0.37;
+}
+
+/* slideDot */
+.slideYear .slideWiperdot {
+  margin-left: 1.31rem;
+  height: 20.06rem;
+  width: 1.5625rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.slideYear .slideWiperdot .swiper-wrapper {
+  align-items: center;
+}
+.slideYear .slideWiperdot .swiper-slide span {
+  display: block;
+  /* width: 0.58581rem; */
+  height: 0.58581rem;
+  border-radius: 99px;
+  background-color: #e8f5ee;
+  margin: 0 auto;
+}
+.slideYear .slideWiperdot .swiper-slide {
+  margin: 1.65rem 0;
+}
+.slideYear .slideWiperdot .swiper-slide.swiper-slide-active {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 99px;
+}
+.slideYear .slideWiperdot .swiper-slide.swiper-slide-active span {
+  border: 1px solid #16954f;
+  height: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+}
+.slideYear .slideWiperdot .swiper-slide.swiper-slide-active span::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 50%;
+  border-radius: 99px;
+  background-color: #16954f;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slideYear .slideWiperdot .swiper-slide {
+  width: 0.58581rem;
+  height: fit-content !important;
+  background: #e8f5ee;
+  border-radius: 99px;
+  opacity: 0.6;
+  background-color: transparent !important;
+}
+.slideYear .slideWiperdot .swiper-slide.swiper-slide-next,
+.slideYear .slideWiperdot .swiper-slide.swiper-slide-prev {
+  opacity: 0.9;
+}
+
+/* slide year2 */
+.groupSlide .slideWiperyear2 {
+  height: 35.2525rem;
+  overflow: hidden;
+  width: 28.0625rem;
+  margin-top: 6.13rem;
+  overflow: hidden;
+}
+.groupSlide .slideWiperyear2 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-family: "Averta Std CY";
+  font-size: 11.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 14.25rem */
+  opacity: 0.2;
+  leading-trim: both;
+  text-edge: cap;
+
+  background: linear-gradient(
+    180deg,
+    rgba(181, 191, 181, 0) 24.7%,
+    #b5bfb5 95.83%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.groupSlide .slideWiperyear2 .swiper-slide.swiper-slide-active {
+  background: linear-gradient(180deg, #18a457 0%, #3bc579 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+.groupSlide .slideWiperyear2 .swiper-slide.swiper-slide-prev {
+  leading-trim: both;
+  text-edge: cap;
+
+  background: linear-gradient(
+    180deg,
+    rgba(181, 191, 181, 0) 24.7%,
+    #b5bfb5 95.83%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.groupSlide .slideWiperyear2 .swiper-slide.swiper-slide-next {
+  text-align: right;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Averta Std CY";
+  font-size: 11.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 14.25rem */
+  opacity: 0.2;
+  background: linear-gradient(
+    180deg,
+    #b5bfb5 24.7%,
+    rgba(181, 191, 181, 0) 95.83%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Averta Std CY";
+  font-size: 11.875rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+/*  */
+.groupSlide .slideWiperText {
+  height: 50rem;
+  width: 29.75rem;
+  margin-left: 4.63rem;
+}
+.groupSlide .slideWiperText .swiper-slide .title {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  font-family: "Averta Std CY";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 2.4rem */
+  letter-spacing: -0.1rem;
+}
+.groupSlide .slideWiperText .swiper-slide .title > span {
+  font-family: "Averta Std CY";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.1rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.groupSlide .slideWiperText .swiper-slide .desc {
+  color: var(--text-title-h-1-grey, #454545);
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 1.4625rem */
+  letter-spacing: -0.03375rem;
+  margin-top: 1rem;
+}
