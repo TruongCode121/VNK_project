@@ -1,16 +1,21 @@
 function init() {
   var swiper = new Swiper(".wrap_product_detail .product_image .mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 4.3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 5,
+        spaceBetween: 8,
+      },
+      // Khi độ rộng màn hình > 769px
+      769: {
+        spaceBetween: 16,
+        slidesPerView: 4.4,
+      },
+    },
   });
   new Swiper(".wrap_product_detail .product_image  .mySwiper2", {
     spaceBetween: 10,
-    navigation: {
-      nextEl: ".wrap_product_detail .product_image .swiper-button-next",
-      prevEl: ".wrap_product_detail .product_image .swiper-button-prev",
-    },
     thumbs: {
       swiper: swiper,
     },
