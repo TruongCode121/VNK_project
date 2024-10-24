@@ -1,0 +1,341 @@
+@import url("../../../components/CustomeBtn/styles.css");
+@import url("../../../../assets/style/global.css");
+@import url("../../../../assets/style/reset.css");
+
+.highlight_news_section {
+  padding: 7.5rem;
+}
+
+.highlight_news_section .highlight_news_card {
+  border-radius: var(--12, 0.75rem);
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  height: 31.25rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.highlight_news_section .highlight_news_card .news_content_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  z-index: 0;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_image {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_image
+  .myNewsImgSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_image
+  .myNewsImgSwiper
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_content {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  padding: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_content .myNewsSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_content .news_type {
+  color: #fff;
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.01rem;
+  margin-bottom: 0.38rem;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_content .news_title {
+  color: #fff;
+  font-family: "Averta Std CY";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 2.925rem */
+  letter-spacing: -0.09rem;
+}
+
+.highlight_news_section .highlight_news_card .slide_news_content .news_desc {
+  overflow: hidden;
+  color: var(--BACKGROUND-ELEVATION-30, #f0f0f0);
+  text-overflow: ellipsis;
+
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  align-self: stretch;
+  margin: 2rem 0;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  [class*="swiper-button-"]::after {
+  display: none;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  [class*="swiper-button-"] {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .swiper-button-next {
+  bottom: 0;
+  top: unset;
+  left: 3.62rem !important;
+  right: unset;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .swiper-button-next
+  img {
+  transform: rotateZ(180deg);
+  width: 100%;
+  height: 100%;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .swiper-button-prev {
+  bottom: 0;
+  top: unset;
+  left: 0rem !important;
+  right: unset;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .swiper-button-prev
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .news-swiper-pagination {
+  width: fit-content;
+  bottom: 0;
+  top: unset;
+  right: 0rem !important;
+  left: unset;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .news-swiper-pagination
+  .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  position: relative;
+  width: 0.58581rem;
+  height: 0.58581rem;
+  margin: 0 0.4rem;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .news-swiper-pagination
+  .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  transform: scale(1);
+  background-color: transparent;
+  width: 0.58581rem;
+  height: 0.58581rem;
+  display: block;
+  border-radius: 999px;
+  transition: all 0.4s linear;
+  border: 0.1rem white solid;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .news-swiper-pagination
+  .swiper-pagination-bullet-active.swiper-pagination-bullet::after {
+  content: "";
+  transform: scale(1.7);
+  opacity: 1;
+}
+
+.highlight_news_section
+  .highlight_news_card
+  .slide_news_content
+  .myNewsSwiper
+  .news-swiper-pagination
+  .swiper-pagination-bullet-active {
+  background: rgb(255, 255, 255);
+}
+
+.highlight_news_section .highlight_news_slide_mb {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .highlight_news_section {
+    padding: 1.5rem 1rem 1rem 1rem;
+    width: 100%;
+  }
+
+  .highlight_news_section .highlight_news_card {
+    display: none;
+  }
+  .highlight_news_section .highlight_news_slide_mb {
+    display: block;
+    width: 100%;
+  }
+  .highlight_news_section .highlight_news_slide_mb .myNewsSwiperMb {
+    width: 100%;
+  }
+  .highlight_news_section .highlight_news_slide_mb .myNewsSwiperMb .news_card {
+    position: relative;
+    background: var(
+      --Text-Title-H2,
+      linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+    );
+    border-radius: var(--12, 0.75rem);
+    height: 18.125rem;
+  }
+
+  .highlight_news_section
+    .highlight_news_slide_mb
+    .myNewsSwiperMb
+    .news_card
+    .news_img {
+    height: 13.875rem;
+    border-radius: var(--12, 0.75rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  .highlight_news_section
+    .highlight_news_slide_mb
+    .myNewsSwiperMb
+    .news_card
+    .news_title {
+    color: var(--text-body-inverse-white-inverse, #fff);
+    /* APP/SUB2/MEDIUM */
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 1.225rem */
+    letter-spacing: -0.00875rem;
+    margin: 0.75rem 1rem 1rem 1rem;
+  }
+
+  .highlight_news_section
+    .highlight_news_slide_mb
+    .myNewsSwiperMb
+    .news_card
+    .news_type {
+    color: var(--text-body-inverse-white-inverse, #fff);
+    font-family: "Averta Std CY";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 0.75rem */
+    letter-spacing: -0.00625rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--20, 1.25rem);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    width: fit-content;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .highlight_news_section .highlight_news_slide_mb .news-swiper-pagination-mb {
+    position: unset;
+  }
+
+  .highlight_news_section
+    .highlight_news_slide_mb
+    .news-swiper-pagination-mb
+    .swiper-pagination-bullet {
+    width: 1rem;
+    height: 0.25rem;
+    border-radius: var(--16, 1rem);
+    background: #dfdfdf;
+    transition: all 0.2s linear;
+    transform-origin: center;
+  }
+
+  .highlight_news_section
+    .highlight_news_slide_mb
+    .news-swiper-pagination-mb
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 2.5rem;
+    height: 0.25rem;
+    border-radius: var(--16, 1rem);
+    background: var(--Text-Body-Body-40---sub, #6e6e6e);
+  }
+}
