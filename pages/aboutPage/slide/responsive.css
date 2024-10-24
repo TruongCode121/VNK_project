@@ -1,0 +1,126 @@
+.aboutUs_sliderMb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.aboutUs_sliderMb .growthStory {
+  margin: 0 1rem;
+  color: var(--Main-Green, #16954f);
+
+  /* APP/SUB - M/12 - Se - M */
+  font-family: "Averta Std CY";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 0.9rem */
+  letter-spacing: -0.0075rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.aboutUs_sliderMb .growthStory::after {
+  position: absolute;
+  content: "";
+  bottom: -0.2rem;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--Main-Green, #16954f);
+}
+.aboutUs_sliderMb .slideWiperMb {
+  margin-top: 4.63rem;
+}
+.aboutUs_sliderMb .slideWiperMb .swiper-slide {
+  /* margin: 0 1.5rem; */
+  /* APP/Timeline Mobile */
+  font-family: "Averta Std CY";
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 6rem */
+  color: var(--Text-Scale-5, #f1f1f1);
+}
+.aboutUs_sliderMb .slideWiperMb .swiper-slide.swiper-slide-active {
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutUs_sliderMb .slideWiperContentMb {
+  margin-top: 3.5rem;
+}
+.aboutUs_sliderMb .slideWiperContentMb .swiper-slide .inner-slide {
+  position: relative;
+  overflow: hidden;
+}
+.aboutUs_sliderMb .slideWiperContentMb .swiper-slide .inner-slide p {
+  position: relative;
+  padding: 0 1rem;
+  text-align: center;
+  height: 9.5rem;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  text-align: center;
+
+  /* APP/H4/18 - B - Mb */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.0225rem;
+}
+.aboutUs_sliderMb .slideWiperContentMb .swiper-slide .inner-slide .seeMore {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 45.03%,
+    #fff 100%
+  );
+  height: 5.8125rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.aboutUs_sliderMb
+  .slideWiperContentMb
+  .swiper-slide
+  .inner-slide
+  .seeMore.hidden {
+  display: none;
+}
+.aboutUs_sliderMb
+  .slideWiperContentMb
+  .swiper-slide
+  .inner-slide
+  .seeMore
+  .title {
+  /* APP/BUTTON/16 - Se */
+  padding-top: 2.5rem;
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutUs_sliderMb .slideWiperContentMb .swiper-slide .inner-slide .seeMore img {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.31rem;
+}

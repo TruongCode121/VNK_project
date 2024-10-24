@@ -1,0 +1,151 @@
+#contactPage {
+  position: relative;
+}
+
+#contactPage .innerContact {
+  padding-top: 8.69rem;
+  margin-left: 7.5rem;
+  width: 39.62rem;
+  padding-bottom: 10.5rem;
+}
+#contactPage .innerContact .breadcrumb {
+  width: fit-content;
+  position: relative;
+  left: -7.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 11.26%,
+    rgba(218, 218, 218, 0.3) 43.45%,
+    rgba(218, 218, 218, 0.3) 59.55%,
+    rgba(255, 255, 255, 0) 91.74%
+  );
+  padding: 0.38rem 7.5rem;
+}
+#contactPage .innerContact .breadcrumb .text {
+  text-align: justify;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.35rem */
+  letter-spacing: -0.01125rem;
+  color: var(--Text-Body-Body-30, #828282);
+}
+#contactPage .innerContact .breadcrumb .text span {
+  font-weight: 400;
+}
+#contactPage .innerContact .titleHeading {
+  margin-top: 4.06rem;
+  /* PC/H1/BOLD */
+  font-family: "Averta Std CY";
+  font-size: 3.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.5rem */
+  letter-spacing: -0.1875rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#contactPage .innerContact .descContact {
+  margin-top: 1rem;
+  color: rgba(29, 29, 29, 0.7);
+
+  /* PC/Body/Body - 18 -R */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+}
+#contactPage .innerContact .inforContact {
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+#contactPage .innerContact .inforContact h3 {
+  color: var(--Text-Scale-80, #262626);
+  font-family: "Averta Std CY";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 141.4%; /* 2.121rem */
+}
+#contactPage .infors {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+#contactPage .infors .infor_item {
+  display: flex;
+}
+#contactPage .infors .infor_item img {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.08075rem 0.1875rem 0.08075rem 0.18763rem;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  margin-right: 0.75rem;
+}
+#contactPage .infors .infor_item p {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+  /* PC/Body/Body - 18 -R */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+}
+#contactPage .socials {
+  display: flex;
+  margin-top: 1.25rem;
+}
+#contactPage .socials .socialIttem {
+  margin-right: 1rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+#contactPage .map {
+  margin-top: 2rem;
+  width: 100%;
+  height: 21.875rem;
+  border-radius: var(--16, 1rem);
+  background: linear-gradient(95deg, #11743e -37.19%, #18a457 131.31%);
+  overflow: hidden;
+}
+#contactPage .map .ifMap {
+  height: 18.37rem;
+  width: 100%;
+}
+#contactPage .map .btnView {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  color: var(--text-body-inverse-white-inverse, #fff);
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+}
+#contactPage .map .btnView img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.75rem;
+}
+#contactPage .bgContact {
+  width: 36.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

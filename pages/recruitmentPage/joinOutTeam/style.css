@@ -1,0 +1,150 @@
+#joinOutTeam {
+  padding-top: 7.5rem;
+}
+#joinOutTeam .innerSection {
+  position: relative;
+  height: 30.98rem;
+  margin: 0 7.5rem;
+}
+.bgJoinOur {
+  position: absolute;
+  inset: 0;
+}
+.bgJoinOurMb {
+  display: none;
+}
+.contentJoinOut {
+  position: absolute;
+  top: 6.67rem;
+  right: 6.25rem;
+  width: 26.37rem;
+}
+.contentJoinOut h2 {
+  /* PC/H3/48-B */
+  font-family: "Averta Std CY";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 3.6rem */
+  letter-spacing: -0.12rem;
+  /* background: linear-gradient(90deg, #256c4e 0%, #34bb80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #fff;
+}
+.contentJoinOut p {
+  color: var(
+    --text-body-inverse-white-70-sub-inverse,
+    rgba(255, 255, 255, 0.7)
+  );
+
+  /* PC/18 - semi */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.575rem */
+  letter-spacing: -0.01125rem;
+  margin-top: 0.75rem;
+}
+.contentJoinOut .seeOpen {
+  width: fit-content;
+  margin-top: 2.5rem;
+  border-radius: 3.125rem;
+  background: #fff;
+  padding: 1rem var(--36, 2.25rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+  /* PC/Button/20-semi */
+  font-family: "Averta Std CY";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.75rem */
+  letter-spacing: -0.0125rem;
+}
+.contentJoinOut .seeOpen img {
+  display: none;
+}
+@media (max-width: 769px) {
+  #joinOutTeam {
+    padding: 2.5rem 1rem 1rem 1rem;
+  }
+  #joinOutTeam .innerSection {
+    position: relative;
+    width: 21.4375rem;
+    margin: 0;
+    height: 31rem;
+  }
+  #joinOutTeam .innerSection .bgJoinOur {
+    width: 21.4375rem;
+    height: 31rem;
+  }
+  .bgJoinOur {
+    display: none;
+  }
+  .bgJoinOurMb {
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+  .contentJoinOut {
+    top: 18rem;
+
+    width: 19.44rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  .contentJoinOut h2 {
+    text-align: center;
+
+    /* APP/H3/24 - B - M */
+    font-family: "Averta Std CY";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 1.8rem */
+    letter-spacing: -0.03rem;
+  }
+  .contentJoinOut p {
+    color: var(--Text-Title-White-inverse, #fff);
+    text-align: center;
+    font-family: "Averta Std CY";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    letter-spacing: 0.00219rem;
+    margin-top: 0.5rem;
+  }
+  .contentJoinOut .seeOpen {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--Text-button, #454545);
+
+    /* APP/BUTTON/16 - Se */
+    font-family: "Averta Std CY";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 1.5rem */
+    letter-spacing: -0.01rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    background: var(
+      --Button-Button,
+      linear-gradient(264deg, #beffdc 34.21%, #8dff9a 96.39%)
+    );
+  }
+  .contentJoinOut .seeOpen img {
+    display: block;
+    margin-left: 0.31rem;
+  }
+}
