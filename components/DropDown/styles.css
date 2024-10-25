@@ -1,0 +1,71 @@
+@import url("../../../../assets/style/global.css");
+@import url("../../../../assets/style/reset.css");
+
+.dropdown {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.dropdown .dropdown-button {
+  display: flex;
+  padding: 0.75rem 1rem;
+  min-width: 12.5rem;
+  width: fit-content;
+  align-items: center;
+  border-radius: var(--16, 1rem);
+  border: 1px solid var(--Text-Scale-10, #c5c5c5);
+  justify-content: space-between;
+
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: -0.01rem;
+
+  cursor: pointer;
+}
+
+.dropdown .dropdown-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.dropdown .dropdown-content {
+    position: absolute;
+    z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--16, 1rem);
+  background: var(--Text-Scale-5, #f1f1f1);
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.dropdown .dropdown-content input {
+  display: none;
+}
+
+.dropdown .dropdown-content label {
+  color: var(--Text-Body-Body-30, #828282);
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: -0.01rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.dropdown .dropdown-content input:checked + label {
+  color: var(--text-body-inverse-white-inverse, #fff);
+  background: linear-gradient(101deg, #2c7234 -24.02%, #15a256 115.7%);
+}

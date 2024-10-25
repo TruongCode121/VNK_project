@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div style="height: 200vh; width: 100%; background-color: aqua"></div>
+    <section class="newsListSection">
+      <img src="./images/News.png" class="section-bg" alt="" />
+      <div class="header_container">
+        <h2>All Articles</h2>
+        <div class="dropdown dropdown_pc">
+          <div class="dropdown-button" onclick="toggleDropdown()">
+            Market
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M19 9L12 16L5 9"
+                stroke="#3F3F3F"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="dropdown-content">
+            <input
+              type="radio"
+              name="filter"
+              value="market"
+              id="market"
+              checked
+            />
+            <label for="market">Market</label>
+            <input type="radio" name="filter" value="project" id="project" />
+            <label for="project">Project</label>
+            <input type="radio" name="filter" value="industry" id="industry" />
+            <label for="industry">Industry</label>
+          </div>
+        </div>
+        <div class="dropdown_mb_container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M6 12H18M3 6H21M9 18H15"
+              stroke="url(#paint0_linear_3340_29021)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_3340_29021"
+                x1="3"
+                y1="12"
+                x2="21"
+                y2="12"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#15A256" />
+                <stop offset="1" stop-color="#2C7234" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <h4>Filter</h4>
+          <div class="dropdown_mb" onclick="showFilterMbOption()">
+            <p>Market</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M16 10L12 14L8 10"
+                stroke="#98A6B2"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="filter_mb_option">
+            <div class="filter_mb_option_title">
+              <h4>Select news type</h4>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                onclick="showFilterMbOption()"
+              >
+                <path
+                  d="M6.00003 18L12 12M12 12L18 6M12 12L5.99997 6M12 12L18 18"
+                  stroke="#1A292C"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <label class="option_container"
+              >Food packaging
+              <input type="radio" name="radio" id="1" checked />
+              <span class="checkmark"></span>
+            </label>
+            <label class="option_container"
+              >Shipping bag
+              <input type="radio" name="radio" id="2" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="option_container"
+              >Shopping bag
+              <input type="radio" name="radio" id="3" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="option_container"
+              >Trash Bags
+              <input type="radio" name="radio" id="4" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="option_container"
+              >Injection Moulding Products
+              <input type="radio" name="radio" id="5" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="option_container"
+              >Uncategorized
+              <input type="radio" name="radio" id="6" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="section_content">
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="news_img_container">
+            <img class="news_img" src="./images/IMG.jpg" alt="" />
+            <div class="gradient_layer"></div>
+          </div>
+          <div class="news_card_content">
+            <h3 class="news_card_title">
+              Custom Plastic Bag Manufacturers: Who They Are & What They Do
+            </h3>
+            <div class="news_time">
+              <p>16<span>/SEP</span></p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L16 7M21 12L16 17M21 12H3"
+                  stroke="#262626"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom_pagination">
+        <label>
+          <input
+            type="radio"
+            name="pagination_item"
+            class="pagination_item"
+            value="#"
+            checked
+          />1
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="pagination_item"
+            class="pagination_item"
+            value="#"
+          />2
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="pagination_item"
+            class="pagination_item"
+            value="#"
+          />3
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="pagination_item"
+            class="pagination_item"
+            value="#"
+          />4
+        </label>
+      </div>
+      <div class="float_filter_container">
+        <input type="checkbox" id="float_filter_trigger" />
+        <div class="float_filter_option">
+          <label class="option_container"
+            >Food packaging
+            <input type="radio" name="radio" id="1" checked />
+            <span class="checkmark"></span>
+          </label>
+          <label class="option_container"
+            >Shipping bag
+            <input type="radio" name="radio" id="2" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="option_container"
+            >Shopping bag
+            <input type="radio" name="radio" id="3" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="option_container"
+            >Trash Bags
+            <input type="radio" name="radio" id="4" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="option_container"
+            >Injection Moulding Products
+            <input type="radio" name="radio" id="5" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="option_container"
+            >Uncategorized
+            <input type="radio" name="radio" id="6" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <label for="float_filter_trigger" class="float_filter">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M6 12.5H18M3 6.5H21M9 18.5H15"
+              stroke="url(#paint0_linear_3364_30527)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_3364_30527"
+                x1="3"
+                y1="12.5"
+                x2="21"
+                y2="12.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#15A256" />
+                <stop offset="1" stop-color="#2C7234" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <h5>Food packaging</h5>
+          <p><span>20</span> results</p>
+        </label>
+      </div>
+    </section>
+
+    <div style="height: 200vh; width: 100%; background-color: aqua"></div>
+
+    <script src="../../../components/DropDown/index.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
