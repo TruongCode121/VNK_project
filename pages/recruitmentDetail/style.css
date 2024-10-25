@@ -132,6 +132,10 @@ li {
     font-size: 1.5rem !important;
     letter-spacing: -0.03rem !important;
   }
+  .border-b {
+    margin-bottom: -1.5rem;
+    margin-top: -1.5rem;
+  }
   h4:nth-child(1) {
     display: none;
   }
@@ -166,4 +170,284 @@ li {
     font-size: 1rem;
     letter-spacing: -0.01rem;
   }
+  /* Responsive currentJob */
+  #currentJob .innerSection {
+    display: flex;
+    width: 23.4375rem;
+    padding: 2.5rem 0.75rem !important;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1.5rem;
+  }
+  .share-container,
+  .ontop,
+  .button_group {
+    display: none;
+  }
+  .headingSection h3 {
+    font-size: 1.75rem !important;
+    letter-spacing: -0.035rem !important;
+  }
+  .jobs {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem;
+  }
+  #currentJob .innerSection .jobs {
+    display: flex !important;
+    flex-direction: column;
+  }
+  #currentJob .innerSection .jobs .job {
+    padding: 1rem !important;
+  }
+  #currentJob .innerSection .jobs .job h5 {
+    font-size: 1.125rem !important;
+    line-height: 150% !important;
+  }
+  #currentJob .innerSection .jobs .job .desc {
+    font-size: 1rem !important;
+    letter-spacing: -0.01rem !important;
+  }
+  .btnDesc {
+    display: none !important;
+  }
+  #currentJob .innerSection .jobs .job .infor .infor_detail .infor_item img {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+  #currentJob .innerSection .jobs .job .infor .infor_detail .infor_item p {
+    font-size: 0.875rem !important;
+  }
+  #currentJob .innerSection .jobs .job .Urgent .btn_left {
+    display: flex !important;
+  }
+}
+
+#currentJob {
+  position: relative;
+}
+#currentJob .innerSection {
+  padding: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+#currentJob .innerSection .headingSection {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+}
+#currentJob .innerSection .headingSection p {
+  color: #256c4e;
+  font-family: "Averta Std CY";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.3125rem */
+  text-transform: uppercase;
+}
+#currentJob .innerSection .headingSection h3 {
+  /* PC/H2/56-B */
+  font-family: "Averta Std CY";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 4.2rem */
+  letter-spacing: -0.14rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button_group .btn_item {
+  display: flex;
+  padding: 1rem var(--36, 2.25rem);
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 3.125rem;
+  border: 1px solid var(--Text-Title-H2, #15a256);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.75rem */
+  letter-spacing: -0.0125rem;
+  position: relative;
+  overflow: hidden;
+}
+.button_group .btn_item .btn_coating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #7ef4b3;
+  transition: all 0.4s ease-out;
+  border-radius: 3.125rem;
+}
+.button_group .btn_item:hover .btn_coating {
+  width: 100%;
+}
+.button_group .btn_item .btn_value {
+  z-index: 1;
+}
+.button_group .btn_item.seemore {
+  border: 1px solid #15a256;
+  color: #0a4525;
+}
+.button_group .btn_value {
+  transition: all 0.6s ease-out;
+}
+#currentJob .innerSection .jobs {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem var(--Value-24, 1.5rem);
+  grid-template-columns: repeat(2, 1fr);
+}
+#currentJob .innerSection .jobs .job {
+  padding: var(--Value-32, 2rem);
+  border-radius: var(--Value-16, 1rem);
+  background: #fff;
+  box-shadow: 0px 0px 50px 0px rgba(103, 103, 103, 0.05);
+}
+#currentJob .innerSection .jobs .job .Urgent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+#currentJob .innerSection .jobs .job .Urgent .job-status {
+  display: flex;
+  align-items: center;
+}
+#currentJob .innerSection .jobs .job .Urgent .job-status .titleStatus {
+  color: var(--Neutrals-Neutrals500, #898483);
+  font-family: "Averta Std CY";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.3125rem */
+  margin-left: 0.5rem;
+}
+#currentJob .innerSection .jobs .job .Urgent .job-status .status {
+  width: 1rem;
+  height: 1rem;
+  background: #e52638;
+  border-radius: 99px;
+  display: block;
+}
+#currentJob .innerSection .jobs .job .Urgent .btn_left {
+  /* margin-left: 9.5rem; */
+  padding: 0.25rem 1rem;
+  align-items: center;
+  border-radius: 1.5rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  display: none;
+}
+#currentJob .innerSection .jobs .job .Urgent .btn_left img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#currentJob .innerSection .jobs .job h5 {
+  color: var(--Text-Scale-80, #262626);
+  font-family: "Averta Std CY";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 141.4%; /* 2.121rem */
+}
+#currentJob .innerSection .jobs .job .desc {
+  color: var(--Text-Body-Body-40---sub, #6e6e6e);
+
+  /* PC/Body/Body - 18 -R */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+  margin-top: 0.75rem;
+}
+#currentJob .innerSection .jobs .job .infor {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.63rem;
+}
+#currentJob .innerSection .jobs .job .infor .infor_detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.75rem;
+}
+#currentJob .innerSection .jobs .job .infor .btnDesc {
+  display: flex;
+  padding: 1rem var(--36, 2.25rem);
+  justify-content: center;
+  align-items: center;
+  color: var(--Button-Text-Main, #fff);
+
+  /* PC/Button/20-semi */
+  font-family: "Averta Std CY";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 1.75rem */
+  letter-spacing: -0.0125rem;
+  border-radius: 3.125rem;
+  background: var(
+    --Text-Title-H2,
+    linear-gradient(90deg, #15a256 0%, #2c7234 100%)
+  );
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+#currentJob .innerSection .jobs .job .infor .btnDesc span {
+  z-index: 99;
+}
+#currentJob .innerSection .jobs .job .infor .btn-hover {
+  border-radius: 3.125rem;
+  background: #7ef4b3;
+  position: absolute;
+  left: -13.8125rem;
+  width: 11.08rem;
+  height: 3.75rem;
+  transition: all 0.4s ease-out;
+}
+#currentJob .innerSection .jobs .job .infor .btnDesc:hover .btn-hover {
+  left: 0;
+}
+#currentJob .innerSection .jobs .job .infor .btnDesc:hover {
+  color: var(--Text-Scale-80, #262626);
+}
+#currentJob .innerSection .jobs .job .infor .infor_detail .infor_item {
+  display: flex;
+  align-items: center;
+}
+#currentJob .innerSection .jobs .job .infor .infor_detail .infor_item p {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+#currentJob .innerSection .jobs .job .infor .infor_detail .infor_item p span {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+}
+#currentJob .innerSection .jobs .job .infor .infor_detail .infor_item img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  margin-right: 0.75rem;
 }
