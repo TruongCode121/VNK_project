@@ -1,0 +1,195 @@
+#section-newsDetail {
+  display: flex;
+  padding: 0rem 7.5rem 7.5rem 7.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.newsDetail-container {
+  display: flex;
+  width: 68.75rem;
+  max-width: 68.75rem;
+  padding: 2.5rem 5rem var(--Value-64, 4rem) 5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  border-radius: 2rem;
+  background: #fff;
+  box-shadow: 0px 50px 100px 0px rgba(206, 206, 206, 0.1);
+}
+.newsDetail-container h4 {
+  color: var(--Text-Scale-80, #262626);
+
+  /* PC/H4/40-B */
+  font-family: "Averta Std CY";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 3rem */
+  letter-spacing: -0.1rem;
+}
+.tableContent {
+  display: flex;
+  padding: 1.875rem;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--16, 1rem);
+  background: var(--Text-Scale-5, #f1f1f1);
+  width: 100%;
+}
+.tableContent span {
+  color: var(--Text-Scale-70, #313131);
+
+  /* PC/24-B */
+  font-family: "Averta Std CY";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 2.1rem */
+  letter-spacing: -0.03rem;
+  margin-bottom: 1rem;
+}
+.tableContent-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.tableContent-list p {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+  text-align: justify;
+
+  /* PC/Sub titlle */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+  margin-top: 0.5rem;
+}
+.newsDetail-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.newsDetail-content p {
+  color: var(--Text-Body-Body-50---Main, #2a2a2a);
+
+  /* PC/Body/Body - 18 -R */
+  font-family: "Averta Std CY";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.6875rem */
+  letter-spacing: -0.01125rem;
+}
+.newsDetail-content img {
+  height: 31.25rem;
+  border-radius: var(--16, 1rem);
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat,
+    url(<path-to-image>) lightgray 50% / cover no-repeat;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.newsDetail-content img:last-child {
+  margin-bottom: 0;
+}
+.btnShare-content {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  border-radius: 3.3125rem;
+  background: var(--BACKGROUND-ELEVATION-30, #f0f0f0);
+}
+.btnShare-content span {
+  color: var(--Text-button, #454545);
+
+  /* APP/BUTTON/16 - Se */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.01rem;
+}
+.btnShare-content img {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+/* Responsive */
+@media only screen and (max-width: 769px) {
+  .share-container,
+  .ontop {
+    display: none;
+  }
+  #section-newsDetail {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .newsDetail-container {
+    padding: 0;
+    gap: 2.5rem;
+  }
+  .newsDetail-content img {
+    height: 11.25rem;
+  }
+  .btnShare-content {
+    display: flex;
+  }
+}
+.share {
+  padding: 0.5rem 0.3rem;
+  border-bottom: 1px solid var(--Text-Scale-10, #c5c5c5);
+  color: var(--Text-Body-Body-40---sub, #6e6e6e);
+  /* PC/16-B */
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: -0.01rem;
+  cursor: default;
+}
+.share-link {
+  display: flex;
+  width: 3.125rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.share-link a {
+  margin-top: 0.75rem;
+}
+.ontop,
+.share-container {
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  cursor: default;
+  position: sticky;
+  position: -webkit-sticky;
+}
+.ontop {
+  margin-left: 2.5rem;
+  opacity: 0;
+  top: 19rem;
+  scroll-behavior: smooth;
+}
+.share-container {
+  margin-top: 31.75rem;
+  margin-right: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  top: 150px;
+  /* bottom: 0px; */
+}
+.ontop.show {
+  opacity: 1;
+  cursor: pointer;
+}
+.ontop img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
